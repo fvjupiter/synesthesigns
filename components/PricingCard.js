@@ -70,7 +70,8 @@ const ExtraToggle = ({ arr, setToggleData }) => {
         setisActive(!isActive)
     }
     return <>
-        <div onClick={setData}
+        <div key={'toggle'+arr[0]}
+            onClick={setData}
             className={`group flex py-1 items-center justify-start cursor-pointer`}
             >
             {getCheckedBox(isActive)}
