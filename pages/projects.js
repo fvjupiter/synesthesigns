@@ -17,6 +17,7 @@ const templateData = {
   boxList: [
     <Image className='z-0'
         src={Diamond}
+        alt=''
         placeholder="blur"
         blurDataURL={Placeholder}
         layout='fill' 
@@ -25,6 +26,7 @@ const templateData = {
     />,
     <Image className='z-0'
             src={Diamond}
+            alt=''
             placeholder="blur"
             blurDataURL={Placeholder}
             layout='fill' 
@@ -33,6 +35,7 @@ const templateData = {
     />,
     <Image className='z-0'
             src={Diamond}
+            alt=''
             placeholder="blur"
             blurDataURL={Placeholder}
             layout='fill' 
@@ -41,6 +44,7 @@ const templateData = {
     />,
     <Image className='z-0'
             src={Diamond}
+            alt=''
             placeholder="blur"
             blurDataURL={Placeholder}
             layout='fill' 
@@ -49,6 +53,7 @@ const templateData = {
     />,
     <Image className='z-0'
             src={Diamond}
+            alt=''
             placeholder="blur"
             blurDataURL={Placeholder}
             layout='fill' 
@@ -57,6 +62,7 @@ const templateData = {
     />,
     <Image className='z-0'
             src={Diamond}
+            alt=''
             placeholder="blur"
             blurDataURL={Placeholder}
             layout='fill' 

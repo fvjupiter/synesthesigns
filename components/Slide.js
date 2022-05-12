@@ -161,8 +161,8 @@ export default function Slide({ boxList, currentBoxId, boxIdHandler, isBox_chose
     }
     
     //components (function which returns elements to not always render again...)
-    const getBox = ({ val, index }) => <div key={index} style={{ transition: '0.3s' }}>
-        <div 
+    const getBox = ({ val, index }) => <div key={val} style={{ transition: '0.3s' }}>
+        <div key={index}
             style={{ 
                 zIndex: 2, 
                 height: height, 

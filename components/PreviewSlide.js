@@ -47,7 +47,7 @@ export default function PreviewSlide({ data, screen }) {
                     onMouseEnter={() => setcirclesHover(true) } 
                     onMouseLeave={() => setcirclesHover(false) }
                     className={`flex justify-center ${isBoxChosen ? 'mb-0' : 'mb-3'}`}
-                >
+                    >
                     {data.boxList.map((circle, index) => (
                         <div key={index}
                             onClick={() => { setboxId(index); setisBoxChosen(true) }} 
@@ -55,7 +55,6 @@ export default function PreviewSlide({ data, screen }) {
                             className={`group max-w-fit ${(boxId != index || !isBoxChosen) && 'cursor-pointer'} py-2`}
                             >
                             <div 
-                                key={index+'A'}
                                 className={`${boxId == index && isBoxChosen ? 'bg-white' 
                                     : `bg-black group-hover:bg-opacity-60 group-hover:bg-white bg-opacity-80 group-active:bg-opacity-40
                                     group-active:shadow-answers-inner group-hover:shadow-none shadow-3xl`} 
