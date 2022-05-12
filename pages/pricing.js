@@ -53,8 +53,8 @@ export default function Pricing({ screenHeight }) {
         <div className={`flex items-center justify-center scale-105 w-80 sm:scale-100 sm:w-10/12 my-6 text-black rounded-3xl bg-white bg-opacity-80 ring-2 ring-cyan-300 border-4 border-white shadow-5xl mx-auto mt-0 px-4 py-2`}>
           <ul style={{ listStyleType: 'circle' }} className='mx-4'>
               <li className='font-light'>Add or remove features &amp; pages</li>
-              <li className='font-light'>Hit 'Send Request' to send me an e-mail and receive a personal offer</li>
-              <li className='font-light'>Please provide additional information about what kind of Web-App you're looking for as well as your <span className='font-bold'>design wishes</span></li>
+              <li className='font-light'>Hit &apos;Send Request&apos; to send me an e-mail and receive a personal offer</li>
+              <li className='font-light'>Please provide additional information about what kind of Web-App you&apos;re looking for as well as your <span className='font-bold'>design wishes</span></li>
               {/* <li className='font-light'>The calculated price is just a prediction and can vary depending on individual requirements</li> */}
               {/* <li className='font-light'>If you have any questions just send me an e-mail to <a href={`mailto:schoof.frederik@gmail.com?subject=Web-App`}>schoof.frederik@gmail.com</a></li> */}
           </ul>

@@ -18,7 +18,7 @@ export default function PreviewSlide({ data, screen }) {
     const height = width * 0.6
     
     const getButton = ({ title, clickHandle, classN }) => (
-        <div 
+        <div key={title}
             onClick={isBoxChosen ? clickHandle : null}
             className={`${classN} ${isBoxChosen ? 'hover:text-white text-gray-300 cursor-pointer active:shadow-inner-xl hover:bg-opacity-40 active:bg-opacity-0' 
                 : 'text-gray-600'} 
@@ -55,7 +55,7 @@ export default function PreviewSlide({ data, screen }) {
                             className={`group max-w-fit ${(boxId != index || !isBoxChosen) && 'cursor-pointer'} py-2`}
                             >
                             <div 
-                                key={index}
+                                key={index+'A'}
                                 className={`${boxId == index && isBoxChosen ? 'bg-white' 
                                     : `bg-black group-hover:bg-opacity-60 group-hover:bg-white bg-opacity-80 group-active:bg-opacity-40
                                     group-active:shadow-answers-inner group-hover:shadow-none shadow-3xl`} 
