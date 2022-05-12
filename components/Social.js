@@ -14,9 +14,9 @@ export default function Social({ screenHeight }) {
         {children}
     </div>
   )
-
+//   top: screenHeight / 2 - 100
   return (
-    <div style={{ top: screenHeight / 2 - 100 }} className={`fixed left-0 z-50`}>
+    <div style={{ bottom: 0 }} className={`fixed left-0 z-50`}>
         <Item bg={'bg-cyan-500'}>
             <GoMail size={32} className='text-white'/>
             <Content bg={'bg-cyan-500'}>schoof.frederik@gmail.com</Content>
