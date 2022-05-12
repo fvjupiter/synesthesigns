@@ -33,13 +33,21 @@ function MyApp({ Component, pageProps }) {
     }
   }, [asPath])
 
-  const heightDiv = useRef()
+  const screenRef = useRef()
   const [height, setheight] = useState(0)
   const [width, setwidth] = useState(0)
+  // useEffect(() => {
+  //   setheight(screenRef.current.clientHeight)
+  //   setwidth(screenRef.current.clientWidth)
+  // }, [])
   useEffect(() => {
-    setheight(heightDiv.current.clientHeight)
-    setwidth(heightDiv.current.clientWidth)
-  }, [])
+    const observer = new ResizeObserver(entries => {
+        setwidth(entries[0].contentRect.width)
+        setheight(entries[0].contentRect.height)
+    })
+    observer.observe(screenRef.current)
+    return () => screenRef.current && observer.unobserve(screenRef.current)
+}, [])
   
   return <>
     <Head>
@@ -47,7 +55,7 @@ function MyApp({ Component, pageProps }) {
       <meta name="description" content="Modern Web-Apps" />
       <link rel="icon" href="/fredy.jpeg" />
     </Head>
-    <div ref={heightDiv} className='h-screen w-screen fixed -z-50'/>
+    <div ref={screenRef} className='h-screen w-screen fixed -z-50'/>
     <TopBar id={id} setid={setid} navItems={navItems}/>
     <Social screenHeight={height} />
     <div className='mt-20 z-10 w-screen absolute overflow-scroll'>
