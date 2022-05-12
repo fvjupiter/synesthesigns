@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} screenHeight={height} screenWidth={width}/>
       <Footer />
     </div>
-    <div className='top-0 left-0 right-0 bottom-0 fixed z-0 bg-black'>
+    <div className='top-0 left-0 h-screen w-screen fixed z-0 bg-black'>
     {
       (asPath == '/pricing' || asPath == '/projects') ? <>
         <Image 
