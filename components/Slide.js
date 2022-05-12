@@ -227,7 +227,7 @@ export default function Slide({ boxList, currentBoxId, boxIdHandler, isBox_chose
                 onHoverEnd={!isScroll && scaleBoxNorm}
                 >
                     {!isScroll && endless && getBox({ val:'go to last', index: -1 })}
-                    {boxList.map((val, index) => <div key={index}>{getBox({ val, index })}</div>)}
+                    {boxList.map((val, index) => getBox({ val, index }))}
                     {!isScroll && endless && getBox({ val:'go to first', index: boxList.length })}
             </motion.section>
         </div>
