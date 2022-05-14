@@ -46,11 +46,11 @@ export default function Pricing({ screenHeight }) {
   }
 
   return <>
-    <div style={{ minHeight: screenHeight -80 }} className={`pb-20`}>
+    <div style={{ minHeight: screenHeight -80 }} className={`pb-4`}>
       <PageTitle title={'Pricing'}/>
-      <div className='w-[365px] sm:w-[700px] shadow-big rounded-3xl mx-auto my-8 mt-6 py-6'>
+      <div className='w-[375px] sm:w-[640px] sm:shadow-big rounded-3xl mx-auto my-8 mt-0 sm:mt-6 py-6'>
         <PricingCard data={data} price={price} setToggleData={setToggleData} setSectionsData={setSectionsData}/>
-        <div className={`flex items-center justify-center scale-105 w-80 sm:scale-100 sm:w-10/12 my-6 text-black rounded-3xl bg-white bg-opacity-80 ring-2 ring-cyan-300 border-4 border-white shadow-5xl mx-auto mt-0 px-4 py-2`}>
+        <div className={`flex items-center justify-center scale-105 w-80 sm:scale-100 sm:w-10/12 my-6 text-black rounded-3xl bg-white bg-opacity-80 ring-2 ring-cyan-300 border-4 border-transparent shadow-5xl mx-auto mt-0 px-4 py-2`}>
           <ul style={{ listStyleType: 'circle' }} className='mx-4'>
               <li className='font-light'>Add or remove features &amp; pages</li>
               <li className='font-light'>Hit &apos;Send Request&apos; to send me an e-mail and receive a personal offer</li>

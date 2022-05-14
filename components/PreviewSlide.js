@@ -14,7 +14,7 @@ export default function PreviewSlide({ data, screen }) {
     }, [isBoxChosen])
 
     const screenSizes = { sm: 640, md: 768, lg: 1024, xl: 1280, xl2: 1536 }
-    const width = screen.width >= screenSizes.sm ? screen.width * 0.6 : screen.width
+    const width = screen.width >= screenSizes.md ? screen.width * 0.6 : screen.width
     const height = width * 0.6
     
     const getButton = ({ title, clickHandle, classN }) => (
@@ -22,9 +22,9 @@ export default function PreviewSlide({ data, screen }) {
             onClick={isBoxChosen ? clickHandle : null}
             className={`${classN} ${isBoxChosen ? 'hover:text-white text-gray-300 cursor-pointer active:shadow-inner-xl hover:bg-opacity-40 active:bg-opacity-0' 
                 : 'text-gray-600'} 
-                text-3xl font-light
+                font-light
                 h-full w-1/2 flex items-center justify-center
-                lg:text-xl xl:text-2xl overflow-hidden
+                text-md sm:text-xl lg:text-2xl overflow-hidden
                 border-4 border-black rounded-3xl
                 duration-300
                 bg-black

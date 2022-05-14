@@ -14,10 +14,10 @@ export default function Social({ screenHeight, screenWidth }) {
         {children}
     </div>
   )
-  const size = screenWidth <= 640 ? 22 : 32
+  const size = screenWidth < 640 ? 22 : 32
   console.log(size)
   return (
-    <div style={{ bottom: 0 }} className={`fixed left-0 z-50`}>
+    <div className={`fixed left-0 bottom-8 z-50`}>
         <Item bg={'bg-cyan-500'}>
             <GoMail size={size} className='text-white'/>
             <Content bg={'bg-cyan-500'}>schoof.frederik@gmail.com</Content>
