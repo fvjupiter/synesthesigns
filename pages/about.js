@@ -6,13 +6,13 @@ import Placeholder from '../public/imgPlaceholder.gif'
 export default function About({ screenHeight }) {
   return (
     <div style={{ minHeight: screenHeight -80 }} className={``}>
-      <div style={{ marginTop: screenHeight -200 }} className='invertBg text-white w-full mx-auto sm:w-[620px] md:w-[748px] lg:w-[1004px] md:text-2xl sm:text-xl text-base lg:text-3xl px-6 py-4 md:px-8 md:py-6 lg:py-8 lg:px-12 border-2 border-white rounded-3xl ring-2 sm:ring-teal-400 bg-black bg-opacity-90 text-justify'>
+      <div style={{ marginTop: screenHeight -200 }} className='invertBg text-white w-full mx-auto sm:w-[620px] md:w-[748px] lg:w-[1004px] md:text-2xl sm:text-xl text-base lg:text-3xl px-7 py-5 md:px-8 md:py-6 lg:py-8 lg:px-12 border-2 border-white rounded-3xl ring-2 sm:ring-teal-400 bg-black bg-opacity-90 text-justify'>
       <p>My name is Frederik Schoof, I&apos;m born in Hamburg in August 1997 and currently based in Bremen.</p><br/>
       <p>In early 2019 I decided to quit my cultural science &amp; philosophy studies @Universität Bremen to work
           as a software developer especially for the web. 
           
           If you need a 
-          secure progressive Web-App / -Site hit me up at <a href= "mailto:schoof.frederik@gmail.com">schoof.frederik@gmail.com</a>! I&apos;m working with mordern
+          secure progressive Web-App / -Site hit me up at <a href= "mailto:schoof.frederik@gmail.com" className='text-teal-300'>schoof.frederik@gmail.com</a>! I&apos;m working with mordern
           industry-leading technologies like React.js / Next.js &amp; Tailwind.css for the front-end as well as Strapi, Contentful &amp; Firestore
           for backend-purposes. The main advantages over editors like wordpress are security and speed. If you want to know more just write
           me an e-mail.
