@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }) {
     </Head>
     <div ref={screenRef} className='h-screen w-screen fixed -z-50'/>
     <TopBar id={id} setid={setid} navItems={navItems}/>
-    <Social screenHeight={height} />
+    <Social screenHeight={height} screenWidth={width}/>
     <div className='mt-20 z-10 w-screen absolute overflow-scroll'>
       <Component {...pageProps} screenHeight={height} screenWidth={width}/>
       <Footer />
