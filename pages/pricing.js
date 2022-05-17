@@ -79,5 +79,5 @@ const data = {
   included: ['Individual Design', 'Mobile & Desktop Version', 'Content-Management-System'],
   extras: [['Install-Function', 100], ['Comment-Function', 150], ['Like-System', 150], ['User-Authentication', 300], ['Individual Logo', 150]],
   sections: ['Pages / Sections', 1, 100],
-  price: 299,
+  price: 349,
 }

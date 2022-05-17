@@ -39,7 +39,7 @@ export default function PreviewSlide({ data, screen }) {
         ><div className={`flex justify-center -mt-4`}>
             <div className={` duration-200 rounded-xl textShadow px-2
                 text-xs font-bold origin-bottom text-white ${circlesHover ? 'scale-100' : 'scale-0'}`}
-                >{circlesHover && data.titleArr[circleIdHover] ? data.titleArr[circleIdHover] : 'Example'}
+                >{circlesHover && data.titleArr[circleIdHover] ? data.titleArr[circleIdHover][0] : 'Example'}
             </div>
         </div>
             <div className='justify-center flex'>
@@ -70,8 +70,8 @@ export default function PreviewSlide({ data, screen }) {
     return <>
         <PageTitle 
             title={
-                circlesHover && !isBoxChosen ? (data.titleArr[circleIdHover] ? data.titleArr[circleIdHover] : 'Example')
-                : data.titleArr[boxId] ? data.titleArr[boxId] : 'Example'
+                circlesHover && !isBoxChosen ? (data.titleArr[circleIdHover][0] ? data.titleArr[circleIdHover][0] : 'Example')
+                : data.titleArr[boxId] ? data.titleArr[boxId][0] : 'Example'
             } 
             classN={`${isBoxChosen ? 'opacity-100' : circlesHover ? 'opacity-30' : 'opacity-0'}`}
         />
@@ -98,7 +98,7 @@ export default function PreviewSlide({ data, screen }) {
                     scale-[0.94] mx-auto w-full h-12 lg:h-14 xl:h-16 flex items-center justify-center 
                     ring-2 ring-gray-600 rounded-3xl overflow-hidden duration-300`}
                 >
-                {getButton({ title:'Demo', clickHandle: () => router.push(`preview/${boxId}`), classN:'border-r-0 rounded-r-none'})}
+                {getButton({ title:'Demo', clickHandle: () => window.open(data.titleArr[boxId][1], '_blank').focus(), classN:'border-r-0 rounded-r-none'})}
                 {getButton({ title: 'Pricing', clickHandle: () => router.push(`pricing`), classN:'border-l-0 rounded-l-none'})}
             </div>
         </div>

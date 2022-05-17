@@ -3,6 +3,10 @@ import Image from 'next/image'
 import PreviewSlide from '../components/PreviewSlide'
 import Diamond from '../public/diamond.jpg'
 import Placeholder from '../public/imgPlaceholder.gif'
+import Peter from '../public/project-images/peter.png'
+import Undercover from '../public/project-images/undercover.png'
+import Mindfunction from '../public/project-images/mindfunction.png'
+import Mathgame from '../public/project-images/mathgame.png'
 
 export default function Projects({ screenHeight, screenWidth }) {
   return <>
@@ -13,10 +17,10 @@ export default function Projects({ screenHeight, screenWidth }) {
 }
 
 const templateData = {
-  titleArr: ['Portfolio', 'Blog', 'Company', 'Shop', 'Community'],
+  titleArr: [['Portfolio - Peter Pflügler', 'https://portfolio-pp.vercel.app/'], ['Undercover Game', 'http://undercover.sup2fredy.com/'], ['Mindfunction-Test', 'http://mindfunction-test.sup2fredy.com/'], ['Mathgame', 'http://mathgame.sup2fredy.com/'], ['Community']],
   boxList: [
     <Image className='z-0'
-        src={Diamond}
+        src={Peter}
         key={'0'}
         alt='0'
         placeholder="blur"
@@ -26,7 +30,7 @@ const templateData = {
         objectPosition='center'
     />,
     <Image className='z-0'
-            src={Diamond}
+            src={Undercover}
             key={'1'}
             alt='1'
             placeholder="blur"
@@ -36,7 +40,7 @@ const templateData = {
             objectPosition='center'
     />,
     <Image className='z-0'
-            src={Diamond}
+            src={Mindfunction}
             key={'2'}
             alt='2'
             placeholder="blur"
@@ -46,7 +50,7 @@ const templateData = {
             objectPosition='center'
     />,
     <Image className='z-0'
-            src={Diamond}
+            src={Mathgame}
             key={'3'}
             alt='3'
             placeholder="blur"
