@@ -14,13 +14,13 @@ export default function PreviewSlide({ data, screen }) {
     }, [isBoxChosen])
 
     const screenSizes = { sm: 640, md: 768, lg: 1024, xl: 1280, xl2: 1536 }
-    const width = screen.width >= screenSizes.md ? screen.width * 0.6 : screen.width
+    const width = screen.width >= screenSizes.md ? screen.width * 0.6 : screen.width + 20
     const height = width * 0.6
     
     const getButton = ({ title, clickHandle, classN }) => (
         <div key={title}
             onClick={isBoxChosen ? clickHandle : null}
-            className={`${classN} ${isBoxChosen ? 'hover:text-white text-gray-300 cursor-pointer active:shadow-inner-xl hover:bg-opacity-40 active:bg-opacity-0' 
+            className={`${classN} ${isBoxChosen ? 'hover:text-white text-gray-300 cursor-pointer active:shadow-inner-xl hover:bg-opacity-20 active:bg-opacity-0' 
                 : 'text-gray-600'} 
                 font-light
                 h-full w-1/2 flex items-center justify-center
@@ -28,38 +28,37 @@ export default function PreviewSlide({ data, screen }) {
                 border-4 border-black rounded-3xl
                 duration-300
                 bg-black
-                bg-opacity-80
+                bg-opacity-70
             `}
             >{title}
         </div>
     )
 
-    const getCircles = () => <div 
-        className={`text-center`}
-        ><div className={`flex justify-center -mt-4`}>
+    const getCircles = () => <div className={`text-center`}>
+        {/* <div className={`flex justify-center -mt-4`}>
             <div className={` duration-200 rounded-xl textShadow px-2
                 text-xs font-bold origin-bottom text-white ${circlesHover ? 'scale-100' : 'scale-0'}`}
                 >{circlesHover && data.titleArr[circleIdHover] ? data.titleArr[circleIdHover][0] : 'Example'}
             </div>
-        </div>
+        </div> */}
             <div className='justify-center flex'>
                 <div
                     onMouseEnter={() => setcirclesHover(true) } 
                     onMouseLeave={() => setcirclesHover(false) }
-                    className={`flex justify-center ${isBoxChosen ? 'mb-0' : 'mb-3'}`}
+                    className={`flex justify-center ${isBoxChosen ? 'mb-4' : 'mb-5'} mt-3 sm:mt-1 md:mt-2 xl:mt-1`}
                     >
                     {data.boxList.map((circle, index) => (
                         <div key={index}
                             onClick={() => { setboxId(index); setisBoxChosen(true) }} 
                             onMouseEnter={() => { setcircleIdHover(index); setcirclesHover(true) }} 
-                            className={`group max-w-fit ${(boxId != index || !isBoxChosen) && 'cursor-pointer'} py-2`}
+                            className={`group max-w-fit ${(boxId != index || !isBoxChosen) && 'cursor-pointer'}`}
                             >
                             <div 
                                 className={`${boxId == index && isBoxChosen ? 'bg-white' 
                                     : `bg-black group-hover:bg-opacity-60 group-hover:bg-white bg-opacity-80 group-active:bg-opacity-40
                                     group-active:shadow-answers-inner group-hover:shadow-none shadow-3xl`} 
                                     ring-2 duration-300 rounded-full group
-                                    ${isBoxChosen ? 'h-4 w-4' : 'h-8 w-8'} mx-1`}
+                                    ${isBoxChosen ? 'h-6 w-6' : 'h-8 w-8'} mx-1`}
                             />
                         </div>
                     ))}
@@ -70,10 +69,10 @@ export default function PreviewSlide({ data, screen }) {
     return <>
         <PageTitle 
             title={
-                circlesHover && !isBoxChosen ? (data.titleArr[circleIdHover][0] ? data.titleArr[circleIdHover][0] : 'Example')
+                circlesHover && !isBoxChosen ? (data.titleArr[circleIdHover] && data.titleArr[circleIdHover][0] ? data.titleArr[circleIdHover][0] : 'Example')
                 : data.titleArr[boxId] ? data.titleArr[boxId][0] : 'Example'
             } 
-            classN={`${isBoxChosen ? 'opacity-100' : circlesHover ? 'opacity-30' : 'opacity-0'}`}
+            classN={`${isBoxChosen ? 'opacity-100' : circlesHover ? 'opacity-60' : 'opacity-0'}`}
         />
         <div style={{ height: height }}
             className={`w-screen relative flex justify-center overflow-hidden duration-300`}>

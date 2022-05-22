@@ -12,17 +12,17 @@ export default function Home({ screenHeight }) {
       }, 100);
       setTimeout(() => {
         setisAnimationEnd(true)
-      }, 3000);
+      }, 3500);
     }, [])
     const buttonClassNames = `group w-40 sm:w-[288px] lg:w-80 h-16 sm:h-24
     flex items-center justify-center hover:bg-white hover:text-black duration-300 cursor-pointer`
   return <>
     {screenHeight && <div style={{ minHeight: screenHeight -80 }} className='flex justify-center items-center'>
         <div>
-            <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-[0.5] opacity-0'} duration-[1500ms] mx-auto text-5xl sm:text-7xl py-4 px-6 sm:px-16 md:px-8 md:text-8xl h-fit w-fit bg-black bg-opacity-30 backdrop overflow-hidden rounded-2xl border-2 border-white ring-4 shadow-2xl`}>
+            <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-[0.5] opacity-0'} duration-[1500ms] mx-auto text-5xl sm:text-7xl py-4 px-4 sm:px-16 md:px-8 md:text-8xl h-fit w-fit bg-black bg-opacity-30 backdrop overflow-hidden rounded-2xl border border-white ring-4 shadow-2xl`}>
                 <div className='synesthesigns cursor-default'>SYNESTHESIGNS</div>
             </div>
-            <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-75 opacity-0'} border ring-2 rounded-xl border-white flex bg-black bg-opacity-30 backdrop text-white font-extralight mx-auto overflow-hidden delay-[1000ms] duration-[1000ms]
+            <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-75 opacity-0'} border ring-4 rounded-xl border-white flex bg-black bg-opacity-30 backdrop text-white font-extralight mx-auto overflow-hidden delay-[1000ms] duration-[1000ms]
                 w-fit text-3xl sm:text-5xl mt-8 my-2 
             `}>
                 <Link href={'/projects'}>
@@ -34,7 +34,7 @@ export default function Home({ screenHeight }) {
                     </div>
                 </Link>
             </div>
-            <div className="mt-4 text-4xl sm:text-6xl mx-auto hover:text-white text-gray-200 w-fit textShadow duration-300 cursor-pointer overflow-hidden rounded-2xl ">
+            <div className={`${isScaled ? `opacity-100 ${!isAnimationEnd && 'duration-[2500ms] delay-[1000ms]'}` : 'opacity-0'} mt-4 text-4xl sm:text-6xl mx-auto hover:text-white text-gray-100 w-fit textShadow duration-300 cursor-pointer overflow-hidden rounded-2xl`}>
                 <Link href={'/about'}><span className=''>Frederik Schoof</span></Link>
             </div>
             {/* <div className='flex justify-between mx-auto p-4 backdrop rounded-2xl border border-white ring-2 text-white text-xl'>

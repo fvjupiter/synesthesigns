@@ -189,9 +189,9 @@ export default function Slide({ boxList, currentBoxId, boxIdHandler, isBox_chose
                 display: !isScroll 
                     && (index > boxId + 1 || index < boxId - 1) ? 'none' : 'block',
                 zIndex: index == boxId && 1,
-                border: isDirectScroll && boxId == index && isBoxChosen && '4px solid white'
+                border: isDirectScroll && boxId == index && isBoxChosen && '2px solid blue'
             }}
-            className={`${isDirectScroll && boxId == index && isBoxChosen && 'ring-2 ring-cyan-400 shadow-inner-xl'}`} //only with TailwindCSS
+            className={`${isDirectScroll && boxId == index && isBoxChosen && 'ring-4  shadow-inner-xl'}`} //only with TailwindCSS
             // className={`bg-black bg-opacity-90 text-white py-2 px-4 whitespace-pre-line text-justify text-lg sm:text-2xl font-extralight`}
             >
                 {/* <div dangerouslySetInnerHTML={{ __html: val }} /> */}

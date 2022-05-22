@@ -43,10 +43,8 @@ import React from 'react'
 import { GoMail } from "react-icons/go";
 import { FaTelegramPlane, FaWhatsapp, FaInstagram } from "react-icons/fa";
 
-
-
 export default function Social({ screenHeight, screenWidth }) {
-  const Item = ({ bg, children }) => <div className={`${bg} group p-1 w-7 h-7 sm:w-10 sm:h-10 flex items-center rounded-xl my-4 ring-1 ring-gray-600 hover:ring-white duration-300 cursor-pointer`}>{children}</div>
+  const Item = ({ bg, children }) => <div className={`${bg} group p-1 w-10 h-10 flex items-center rounded-xl my-4 ring-2 hover:ring-white duration-300 cursor-pointer`}>{children}</div>
   const Content = ({ bg, children }) => (
     <div className={`${bg} left-7 h-7 sm:left-10 sm:h-10 w-fit flex items-center justify-start absolute overflow-hidden
         group-hover:scale-x-100 scale-x-0 origin-left duration-300
@@ -56,8 +54,8 @@ export default function Social({ screenHeight, screenWidth }) {
     </div>
   )
   // const size = screenWidth < 640 ? 22 : 32
-  const size = 34
-  console.log(size)
+  const size = 35
+
   return (
     <div className={`flex mx-auto w-72 justify-evenly`}>
         <Item bg={'bg-gradient-to-tr from-teal-300 to-cyan-500'}>
