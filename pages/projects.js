@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import PreviewSlide from '../components/PreviewSlide'
 import Diamond from '../public/diamond.jpg'
-import Placeholder from '../public/imgPlaceholder.gif'
 import Peter from '../public/project-images/peter.png'
 import Undercover from '../public/project-images/undercover.png'
 import Mindfunction from '../public/project-images/mindfunction.png'
@@ -17,14 +16,13 @@ export default function Projects({ screenHeight, screenWidth }) {
 }
 
 const templateData = {
-  titleArr: [['Portfolio - Peter Pflügler', 'https://portfolio-pp.vercel.app/'], ['Undercover Game', 'http://undercover.sup2fredy.com/'], ['Mindfunction-Test', 'http://mindfunction-test.sup2fredy.com/'], ['Mathgame', 'http://mathgame.sup2fredy.com/'], ['Community']],
+  titleArr: [['Portfolio - Peter', 'https://portfolio-pp.vercel.app/'], ['Undercover Game', 'http://undercover.sup2fredy.com/'], ['Mindfunction-Test', 'http://mindfunction-test.sup2fredy.com/'], ['Mathgame', 'http://mathgame.sup2fredy.com/'], ['Community']],
   boxList: [
     <Image className='z-0'
         src={Peter}
         key={'0'}
         alt='0'
         placeholder="blur"
-        blurDataURL={Placeholder}
         layout='fill' 
         objectFit='cover'
         objectPosition='center'
@@ -34,7 +32,6 @@ const templateData = {
             key={'1'}
             alt='1'
             placeholder="blur"
-            blurDataURL={Placeholder}
             layout='fill' 
             objectFit='cover'
             objectPosition='center'
@@ -44,7 +41,6 @@ const templateData = {
             key={'2'}
             alt='2'
             placeholder="blur"
-            blurDataURL={Placeholder}
             layout='fill' 
             objectFit='cover'
             objectPosition='center'
@@ -54,7 +50,6 @@ const templateData = {
             key={'3'}
             alt='3'
             placeholder="blur"
-            blurDataURL={Placeholder}
             layout='fill' 
             objectFit='cover'
             objectPosition='center'
@@ -64,7 +59,6 @@ const templateData = {
             key={'4'}
             alt='4'
             placeholder="blur"
-            blurDataURL={Placeholder}
             layout='fill' 
             objectFit='cover'
             objectPosition='center'
@@ -74,7 +68,6 @@ const templateData = {
             key={'5'}
             alt='5'
             placeholder="blur"
-            blurDataURL={Placeholder}
             layout='fill' 
             objectFit='cover'
             objectPosition='center'

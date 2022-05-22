@@ -6,7 +6,7 @@ import Placeholder from '../public/imgPlaceholder.gif'
 export default function About({ screenHeight }) {
   return (
     <div style={{ minHeight: screenHeight -80 }} className={``}>
-      <div style={{ marginTop: screenHeight -200 }} className='invertBg text-white w-full mx-auto sm:w-[620px] md:w-[748px] lg:w-[1004px] md:text-2xl sm:text-xl text-base lg:text-3xl px-7 py-5 md:px-8 md:py-6 lg:py-8 lg:px-12 border-2 border-white rounded-3xl ring-2 sm:ring-teal-400 bg-black bg-opacity-90 text-justify'>
+      <div style={{ marginTop: screenHeight -200 }} className=' backdrop text-white w-full mx-auto sm:w-[620px] md:w-[748px] lg:w-[1004px] md:text-2xl sm:text-xl text-base lg:text-3xl px-7 py-5 md:px-8 md:py-6 lg:py-8 lg:px-12 border-2 border-white rounded-3xl ring-2 sm:ring-teal-400 bg-black bg-opacity-50 text-justify'>
       <p>My name is Frederik Schoof, I&apos;m born in Hamburg in August 1997 and currently based in Bremen.</p><br/>
       <p>In early 2019 I decided to quit my cultural science &amp; philosophy studies @Universität Bremen to work
           as a software developer especially for the web. 

@@ -47,22 +47,21 @@ export default function Pricing({ screenHeight }) {
 
   return <>
     <div style={{ minHeight: screenHeight -80 }} className={`pb-4`}>
-      <PageTitle title={'Pricing'}/>
-      <div className='w-[375px] sm:w-[640px] sm:shadow-big rounded-3xl mx-auto my-8 mt-0 sm:mt-6 py-6'>
+      <PageTitle title={'Calculator'}/>
+      {/* sm:shadow-big */}
+      <div className='w-[375px] sm:w-[640px] rounded-3xl mx-auto mt-0 sm:mt-6 pt-6'>
         <PricingCard data={data} price={price} setToggleData={setToggleData} setSectionsData={setSectionsData}/>
-        <div className={`flex items-center justify-center scale-105 w-80 sm:scale-100 sm:w-10/12 my-6 text-black rounded-3xl bg-white bg-opacity-80 ring-2 ring-cyan-300 border-4 border-transparent shadow-5xl mx-auto mt-0 px-4 py-2`}>
+        {/* <div className={`scale-[1.3] flex items-center justify-center w-80 my-16 text-white rounded-3xl bg-black bg-opacity-30 backdrop ring-2 ring-cyan-300 border-4 border-transparent shadow-5xl mx-auto mt-16 px-4 py-2`}>
           <ul style={{ listStyleType: 'circle' }} className='mx-4'>
               <li className='font-light'>Add or remove features &amp; pages</li>
               <li className='font-light'>Hit &apos;Send Request&apos; to send me an e-mail and receive a personal offer</li>
               <li className='font-light'>Please provide additional information about what kind of Web-App you&apos;re looking for as well as your <span className='font-bold'>design wishes</span></li>
-              {/* <li className='font-light'>The calculated price is just a prediction and can vary depending on individual requirements</li> */}
-              {/* <li className='font-light'>If you have any questions just send me an e-mail to <a href={`mailto:schoof.frederik@gmail.com?subject=Web-App`}>schoof.frederik@gmail.com</a></li> */}
           </ul>
-        </div>
+        </div> */}
         <a href={`mailto:schoof.frederik@gmail.com?subject=Web-App Request&body=${getEmailBody()}`}>
-            <div className={`text-xl bg-lime-400 hover:bg-lime-300
+            <div className={`scale-[1] mt-12 sm:mt-24 text-xl bg-lime-400 hover:bg-lime-200
                 shadow-3xl hover:shadow-none rounded-3xl duration-300
-                px-4 py-2 mx-auto mb-0
+                px-4 py-2 mx-auto sm:mb-2
                 text-black font-bold 
                 w-72 h-12 flex items-center justify-center`}>
                 <div className='font-medium'>Send Request</div>

@@ -5,9 +5,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import TopBar from '../components/TopBar'
 import CodeImg from '../public/code1.jpg'
+import Hacker from '../public/hacker.jpg'
+import Gold from '../public/gold.jpg'
+import Gold1 from '../public/gold1.jpg'
+import Diamond from '../public/diamond.jpg'
+import Blockchain from '../public/blockchain.jpg'
 import FredyImg from '../public/fredy.jpeg'
 import BlueOrangeSpiral from '../public/blueOrangeSpiral.jpg'
-import Placeholder from '../public/imgPlaceholder.gif'
 import Footer from '../components/Footer'
 import Social from '../components/Social'
 
@@ -57,43 +61,48 @@ function MyApp({ Component, pageProps }) {
     </Head>
     <div ref={screenRef} className='h-screen w-screen fixed -z-50'/>
     <TopBar id={id} setid={setid} navItems={navItems}/>
-    <Social screenHeight={height} screenWidth={width}/>
+    {/* <Social screenHeight={height} screenWidth={width}/> */}
     <div className='mt-20 z-10 w-screen absolute overflow-scroll'>
       <Component {...pageProps} screenHeight={height} screenWidth={width}/>
-      <Footer />
+      {height && <Footer />}
     </div>
     <div className='top-0 left-0 h-screen w-screen fixed z-0 bg-black'>
     {
-      (asPath == '/pricing' || asPath == '/projects') ? <>
+      asPath == '/pricing' ? <>
         <Image 
-            src={BlueOrangeSpiral}
+            src={Diamond}
             placeholder="blur"
-            blurDataURL={Placeholder}
             layout='fill' 
             objectFit={'cover'}
             objectPosition='center'
         />
-        <div className={`top-0 left-0 right-0 bottom-0 absolute z-0 bg-gradient-to-r via-transparent from-black/60 to-black/60`}/>
+        {/* <div className={`top-0 left-0 right-0 bottom-0 absolute z-0 bg-gradient-to-r via-transparent from-black/60 to-black/60`}/> */}
       </>
+      : asPath == '/projects' ?
+      <Image 
+          src={Blockchain}
+          placeholder="blur"
+          layout='fill' 
+          objectFit={'cover'}
+          objectPosition='center'
+      />
       : asPath == '/about' ?
         <Image 
             src={FredyImg}
             placeholder="blur"
-            blurDataURL={Placeholder}
             layout='fill' 
             objectFit={'contain'}
             objectPosition='center'
         />
       : <>
         <Image 
-            src={CodeImg}
+            src={Hacker}
             placeholder="blur"
-            blurDataURL={Placeholder}
             layout='fill' 
             objectFit={'cover'}
             objectPosition='center'
         />
-        <div className={`top-0 left-0 right-0 bottom-0 absolute z-0 bg-gradient-to-t via-black/80 from-black`}/>
+        {/* <div className={`top-0 left-0 right-0 bottom-0 absolute z-0 bg-gradient-to-t via-black/80 from-black`}/> */}
       </>
     }
     </div>
