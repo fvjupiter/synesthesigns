@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { MdDoubleArrow } from "react-icons/md";
 
 export default function Home({ screen }) {
+    const [isScrolledToTop, setisScrolledToTop] = useState(true)
     const [isScaled, setisScaled] = useState(false)
     const [isAnimationEnd, setisAnimationEnd] = useState(false)
     useEffect(() => {
+      setisScrolledToTop(true)
       setisScaled(false)
       setisAnimationEnd(false)
       setTimeout(() => {
@@ -27,10 +30,25 @@ export default function Home({ screen }) {
         `SEO`,
       ]
 
+    const abc = useRef()
+    const scrollRef = useRef()
+    const scrollDown = () => scrollRef.current.scrollIntoView({ behavior: "smooth" })
+    const scrollUp = () => abc.current.scrollIntoView({ behavior: "smooth" })
 
+    useEffect(() => {
+        const interV = setInterval(() => {
+            // console.log(abc.current.getBoundingClientRect().top)
+            // console.log(-screen.height+100)
+            if(abc.current.getBoundingClientRect().top > -screen.height+80) setisScrolledToTop(true)
+            else setisScrolledToTop(false)
+        }, 250)
+    
+      return () => clearInterval(interV)
+    }, [])
 
   return <>
-    {screen.height && <div style={{ minHeight: screen.height -80 }} className='center'>
+    {screen.height && <><div ref={abc} className='w-0 h-0 -mt-20 mb-20'/>
+    <div style={{ minHeight: screen.height -80 }} className='center'>
         <div>
             <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-[0.5] opacity-0'} 
                 h-fit w-fit mx-auto text-5xl sm:text-7xl py-3 sm:py-4 px-2 sm:px-16 md:px-8 md:text-8xl 
@@ -62,6 +80,12 @@ export default function Home({ screen }) {
                 <Link href={'/about'}><span className=''>Frederik Schoof</span></Link>
             </div>
         </div>
-    </div>}
+    </div>
+    <div ref={scrollRef} className='invertBg h-screen '></div>
+    <div onClick={isScrolledToTop ? scrollDown : scrollUp}
+        className={`${isAnimationEnd ? `opacity-100 bottom-16 ${isScrolledToTop ? 'rotate-90' : '-rotate-90'}` : 'opacity-0 bottom-56 rotate-[270deg]'} duration-1000 group ${isScrolledToTop ? '' : ''} fixed w-20 h-20 center inset-x-1/2 -ml-10 cursor-pointer `}>
+            <MdDoubleArrow size={70} className='text-gray-200 group-hover:text-white duration-100'/>
+    </div>
+    </>}
   </>
 }

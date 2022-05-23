@@ -18,9 +18,41 @@ export default function PricingCard({ data, price, setToggleData, setSectionsDat
                     `}>
                     {!isCardInfo ? <BsInfoCircle size={24} className={'scale-[1.15]'}/> : <BsX size={24} />}
                 </div>
-                <div className={`${isCardInfo ? `h-[544px] px-4 py-2 ` : `h-0`}
-                    top-0 left-0 w-full duration-300 ease-in-out z-20 overflow-hidden rounded-2xl
-                    `}>info
+                <div className={`${isCardInfo ? `h-[544px] overflow-scroll pb-20` : `h-0 overflow-hidden`}
+                    w-full px-4 duration-300 ease-in-out z-20 rounded-2xl text-justify text-sm font-light
+                    `}>
+                        A <span className='font-bold'>Web-App</span> is basically a Website which preloads and stores the single pages, 
+                        so it can behave like a desktop or mobile app.<br/><br/>
+                        <ul className='px-4'>
+                            <li className='font-light list-decimal'>Add or remove <span className='font-bold'>features &amp; pages</span></li>
+                            <li className='font-light list-decimal'>A page / section is an area on the Web-App e.g. <span className='font-bold'>Home</span>, <span className='font-bold'>About</span> or an <span className='font-bold'>Image-Gallery</span></li>
+                            <li className='font-light list-decimal'>The price is a prediction and can vary based on your requirements</li>
+                            <li className='font-light list-decimal'>Hit <span className='font-bold'>Send Request</span> to send me an e-mail and receive a <span className='font-bold'>personal offer</span></li>
+                            <li className='font-light list-decimal'>Please provide additional information about what kind of Web-App you&apos;re looking for as well as your <span className='font-bold'>design wishes</span></li>
+                            
+                        </ul><br/>
+                        <span className='font-bold'>Content-Management-System (CMS):</span><br/>
+                        You can manage all your
+                        content by yourself without writing one line of code. The Web-App will be updated
+                        automatically.<br/><br/>
+                        <span className='font-bold'>Install-Function:</span><br/>
+                        Your Web-App will be installable on Smartphones
+                        and PC's which means that your users can use your App offline, directly
+                        accessable through their Homescreen. The App will be updated in the background
+                        if you change the content.<br/><br/>
+                        <span className='font-bold'>User-Authentication:</span><br/> Users will be able to log-in to your Web-App to e.g. save,
+                        comment and like your posts.<br/><br/>
+                        <span className='font-bold'>Individual Logo:</span><br/>
+                        Creation of your custom logo by <a 
+                            href="https://portfolio-fvjupiter.vercel.app/" 
+                            rel="noreferrer" 
+                            target='_blank' 
+                            className='font-medium text-lime-300 hover:text-lime-100 active:text-cyan-400 cursor-pointer'>
+                                IM3K - Designs
+                        </a>
+
+
+
                 </div>
                 <div className={`text-3xl font-cursive font-bold text-center -mt-5`}>{data.title}</div>
                 <div className={`mb-2`}><div className={`text-center font-medium`}>{data.types}</div></div>
