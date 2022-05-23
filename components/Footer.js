@@ -12,7 +12,7 @@ export default function Footer() {
     //         </div> */}
     //     </div>
     // </div>
-    <div className='h-40 relative bottom-0 z-10 bg-black w-screen border-t border-t-black text-white flex items-center justify-center'>
+    <div className='h-40 relative  z-10 bg-black w-screen border-t border-t-black text-white flex items-center justify-center'>
         <div className='sm:text-lg font-bold text-gray-400 text-center'>
             <Social />
             <div>© 2022 All Rights Reserved.</div>
