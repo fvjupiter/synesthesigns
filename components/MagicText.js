@@ -24,7 +24,7 @@ export default function MagicText({ lineArr, children }) {
                 <span 
                     key={element + random(0,10000)} 
                     style={spanSty} 
-                    className={`font-semibold textGradient ${styles.char} ${isAni ? styles.ani : ''}`} 
+                    className={`font-light textShadow ${styles.char} ${isAni ? styles.ani : ''}`} 
                 >{element}</span>
             )
         });
