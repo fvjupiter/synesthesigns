@@ -75,7 +75,7 @@ export default function PreviewSlide({ data, screen }) {
             classN={`${isBoxChosen ? 'opacity-100' : circlesHover ? 'opacity-60' : 'opacity-0'}`}
         />
         <div style={{ height: height }}
-            className={`w-screen relative flex justify-center overflow-hidden duration-300`}>
+            className={`w-screen relative flex justify-center overflow-hidden duration-300 mt-4 sm:mt-3 lg:mt-0`}>
             <Slide 
                 boxList={data.boxList}
                 currentBoxId={boxId}

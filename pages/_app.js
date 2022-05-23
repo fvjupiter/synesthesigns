@@ -78,14 +78,16 @@ function MyApp({ Component, pageProps }) {
         />
         {/* <div className={`top-0 left-0 right-0 bottom-0 absolute z-0 bg-gradient-to-r via-transparent from-black/60 to-black/60`}/> */}
       </>
-      : asPath == '/projects' ?
-      <Image 
-          src={Blockchain}
-          placeholder="blur"
-          layout='fill' 
-          objectFit={'cover'}
-          objectPosition='center'
-      />
+      : asPath == '/projects' ? <>
+        <Image 
+            src={Blockchain}
+            placeholder="blur"
+            layout='fill' 
+            objectFit={'cover'}
+            objectPosition='center'
+        />
+        <div className={`top-0 left-0 right-0 bottom-0 absolute z-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 sm:from-transparent sm:via-transparent sm:to-transparent`}/>
+      </>
       : asPath == '/about' ?
         <Image 
             src={FredyImg}

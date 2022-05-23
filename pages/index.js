@@ -51,7 +51,8 @@ export default function Home({ screenHeight }) {
             <div className={`${isScaled ? `opacity-100 ${!isAnimationEnd && 'duration-[2500ms] delay-[1000ms]'}` : 'opacity-0'} mt-4 mb-3 text-4xl sm:text-6xl mx-auto hover:text-white text-gray-100 w-fit textShadow duration-300 cursor-pointer overflow-hidden rounded-2xl`}>
                 <Link href={'/about'}><span className=''>Frederik Schoof</span></Link>
             </div>
-            {isAnimationEnd && <div className='w-72 mx-auto h-0'><MagicText lineArr={lineArr}/></div>}
+            {/* {isAnimationEnd && <div className='w-72 mx-auto h-0'><MagicText lineArr={lineArr}/></div>} */}
+            
             {/* <div className='flex justify-between mx-auto p-4 backdrop rounded-2xl border border-white ring-2 text-white text-xl'>
                 <div className='pl-4 w-40 sm:w-[288px] lg:w-80 font-bold text-4xl items-center flex justify-start'>
                     1. Planning<br/>
