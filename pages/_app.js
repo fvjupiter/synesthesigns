@@ -19,10 +19,10 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const asPath = router.asPath
   const navItems = [
-    ['Home', '/', 'bg-white'], 
-    ['Pricing', '/pricing', 'bg-lime-400'],
-    ['Projects', '/projects', 'bg-cyan-400'], 
-    ['About', '/about', 'bg-teal-400']
+    ['Home', '/', 'bg-white ring ring-purple-500/50'], 
+    ['Pricing', '/pricing', 'bg-white ring ring-lime-500/60'],
+    ['Projects', '/projects', 'bg-white ring ring-blue-500/70'], 
+    ['About', '/about', 'bg-white ring ring-pink-400/50']
   ]
   const [id, setid] = useState(0)
   const [bgImg, setbgImg] = useState(CodeImg)

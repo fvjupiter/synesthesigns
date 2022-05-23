@@ -17,7 +17,7 @@ export default function TopBar({ id, navItems}) {
                                     {item[0]}
                                 </div>
                             </div>
-                            <div className={`${item[2]} rounded-3xl h-1 ${id == index ? 'w-[90px] sm:w-40' : 'w-0'} duration-300 mx-auto`}/>
+                            <div className={`${item[2]} rounded-3xl h-0.5 ${id == index ? 'w-[90px] sm:w-40' : 'w-0 ring-0'} duration-300 mx-auto`}/>
                         </a>
                     </Link>
                 ))}

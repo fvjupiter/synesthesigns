@@ -13,7 +13,7 @@ export default function Footer() {
     //     </div>
     // </div>
     <div className='h-40 relative bottom-0 z-10 bg-black w-screen border-t border-t-black text-white flex items-center justify-center'>
-        <div className='text-xs sm:text-lg font-bold text-gray-400 text-center'>
+        <div className='sm:text-lg font-bold text-gray-400 text-center'>
             <Social />
             <div>© 2022 All Rights Reserved.</div>
             <div>Powered by <a className='cursor-pointer font-medium synesthesigns' href="https://portfolio-fvjupiter.vercel.app/" rel="noreferrer" target='_blank'>Synesthesigns</a>.</div>

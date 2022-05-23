@@ -19,10 +19,10 @@ export default function Home({ screenHeight }) {
   return <>
     {screenHeight && <div style={{ minHeight: screenHeight -80 }} className='flex justify-center items-center'>
         <div>
-            <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-[0.5] opacity-0'} duration-[1500ms] mx-auto text-5xl sm:text-7xl py-4 px-4 sm:px-16 md:px-8 md:text-8xl h-fit w-fit bg-black bg-opacity-30 backdrop overflow-hidden rounded-2xl border border-white ring-4 shadow-2xl`}>
+            <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-[0.5] opacity-0'} duration-[1500ms] mx-auto text-5xl sm:text-7xl py-3 sm:py-4 px-2 sm:px-16 md:px-8 md:text-8xl h-fit w-fit bg-black bg-opacity-30 backdrop overflow-hidden rounded-2xl border border-white ring-4 ring-cyan-500/50 shadow-2xl`}>
                 <div className='synesthesigns cursor-default'>SYNESTHESIGNS</div>
             </div>
-            <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-75 opacity-0'} border ring-4 rounded-xl border-white flex bg-black bg-opacity-30 backdrop text-white font-extralight mx-auto overflow-hidden delay-[1000ms] duration-[1000ms]
+            <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-75 opacity-0'} border ring-4 ring-cyan-500/50 rounded-xl border-white flex bg-black bg-opacity-30 backdrop text-white font-extralight mx-auto overflow-hidden delay-[1000ms] duration-[1000ms]
                 w-fit text-3xl sm:text-5xl mt-8 my-2 
             `}>
                 <Link href={'/projects'}>
