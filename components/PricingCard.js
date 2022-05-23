@@ -104,11 +104,11 @@ const AddSections = ({ setSectionsData, sections }) => {
         )
         setamount(isAdd ? amount + 1 : amount - 1)
     }
-    return <div className={`flex w-24 py-1 mx-auto items-center justify-between`}>
+    return <div className={`center w-24 py-1 mx-auto justify-between`}>
         <div onClick={() => { if(amount > sections[1]) setData(false) }}
             className={`${amount > sections[1] ? `hover:bg-red-100 active:shadow-none bg-red-300 shadow-answers cursor-pointer` 
                 : 'opacity-30 bg-gray-300'}
-                duration-300 flex items-center justify-center rounded-full`}>
+                center duration-300 rounded-full`}>
             <div className={`text-black duration-300`}>
                 <BsDash size={24} />
             </div>
@@ -117,7 +117,7 @@ const AddSections = ({ setSectionsData, sections }) => {
         <div onClick={() => { if(amount < (sections[3] ? sections[3] : 99))  setData(true) }}
             className={`${amount < (sections[3] ? sections[3] : 99) ? `hover:bg-lime-100 active:shadow-none bg-lime-300 shadow-answers cursor-pointer`
                 : 'opacity-30 bg-gray-300'}
-                duration-300 flex items-center justify-center rounded-full`}>
+                duration-300 center rounded-full`}>
             <div className={`-rotate-45 text-black duration-300`}>
                 <BsX size={24} />
             </div>

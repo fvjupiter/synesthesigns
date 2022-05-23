@@ -23,7 +23,7 @@ export default function PreviewSlide({ data, screen }) {
             className={`${classN} ${isBoxChosen ? 'hover:text-white text-gray-300 cursor-pointer active:shadow-inner-xl hover:bg-opacity-20 active:bg-opacity-0' 
                 : 'text-gray-600'} 
                 font-light
-                h-full w-1/2 flex items-center justify-center
+                center h-full w-1/2
                 text-md sm:text-xl lg:text-2xl overflow-hidden
                 border-4 border-black rounded-3xl
                 duration-300
@@ -35,12 +35,6 @@ export default function PreviewSlide({ data, screen }) {
     )
 
     const getCircles = () => <div className={`text-center`}>
-        {/* <div className={`flex justify-center -mt-4`}>
-            <div className={` duration-200 rounded-xl textShadow px-2
-                text-xs font-bold origin-bottom text-white ${circlesHover ? 'scale-100' : 'scale-0'}`}
-                >{circlesHover && data.titleArr[circleIdHover] ? data.titleArr[circleIdHover][0] : 'Example'}
-            </div>
-        </div> */}
             <div className='justify-center flex'>
                 <div
                     onMouseEnter={() => setcirclesHover(true) } 
@@ -94,7 +88,7 @@ export default function PreviewSlide({ data, screen }) {
             {getCircles()}
             <div style={{ width: width * 0.6, }}
                 className={`${isBoxChosen ? 'opacity-100' : 'opacity-0'}
-                    scale-[0.94] mx-auto w-full h-12 lg:h-14 xl:h-16 flex items-center justify-center 
+                    scale-[0.94] mx-auto w-full h-12 lg:h-14 xl:h-16 center
                     ring-2 ring-gray-600 rounded-3xl overflow-hidden duration-300`}
                 >
                 {getButton({ title:'Demo', clickHandle: () => window.open(data.titleArr[boxId][1], '_blank').focus(), classN:'border-r-0 rounded-r-none'})}

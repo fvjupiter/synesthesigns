@@ -4,16 +4,12 @@ import '../styles/globals.css'
 import Head from 'next/head'
 import Image from 'next/image'
 import TopBar from '../components/TopBar'
-import CodeImg from '../public/code1.jpg'
 import Hacker from '../public/hacker.jpg'
-import Gold from '../public/gold.jpg'
-import Gold1 from '../public/gold1.jpg'
 import Diamond from '../public/diamond.jpg'
 import Blockchain from '../public/blockchain.jpg'
 import FredyImg from '../public/fredy.jpeg'
 import BlueOrangeSpiral from '../public/blueOrangeSpiral.jpg'
 import Footer from '../components/Footer'
-import Social from '../components/Social'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -25,29 +21,17 @@ function MyApp({ Component, pageProps }) {
     ['About', '/about', 'bg-white ring ring-pink-400/50']
   ]
   const [id, setid] = useState(0)
-  const [bgImg, setbgImg] = useState(CodeImg)
   useEffect(() => {
     for (let i = 0; i < navItems.length; i++) {
       if(asPath.includes(navItems[i][1])) setid(i)
     }
-    switch (asPath) {
-      case '/pricing': setbgImg(BlueOrangeSpiral); break;
-      case '/projects': setbgImg(BlueOrangeSpiral); break;
-      default: setbgImg(null); break;
-    }
   }, [asPath])
 
   const screenRef = useRef()
-  const [height, setheight] = useState(0)
-  const [width, setwidth] = useState(0)
-  // useEffect(() => {
-  //   setheight(screenRef.current.clientHeight)
-  //   setwidth(screenRef.current.clientWidth)
-  // }, [])
+  const [screen, setscreen] = useState({ height: 0, width: 0 })
   useEffect(() => {
     const observer = new ResizeObserver(entries => {
-        setwidth(entries[0].contentRect.width)
-        setheight(entries[0].contentRect.height)
+        setscreen({ height: entries[0].contentRect.height, width: entries[0].contentRect.width })
     })
     observer.observe(screenRef.current)
     return () => screenRef.current && observer.unobserve(screenRef.current)
@@ -61,10 +45,9 @@ function MyApp({ Component, pageProps }) {
     </Head>
     <div ref={screenRef} className='h-screen w-screen fixed -z-50'/>
     <TopBar id={id} setid={setid} navItems={navItems}/>
-    {/* <Social screenHeight={height} screenWidth={width}/> */}
     <div className='mt-20 z-10 w-screen absolute overflow-scroll'>
-      <Component {...pageProps} screenHeight={height} screenWidth={width}/>
-      {height && <Footer />}
+      <Component {...pageProps} screen={screen}/>
+      {screen.height && <Footer />}
     </div>
     <div className='top-0 left-0 h-screen w-screen fixed z-0 bg-black'>
     {
@@ -76,7 +59,6 @@ function MyApp({ Component, pageProps }) {
             objectFit={'cover'}
             objectPosition='center'
         />
-        {/* <div className={`top-0 left-0 right-0 bottom-0 absolute z-0 bg-gradient-to-r via-transparent from-black/60 to-black/60`}/> */}
       </>
       : asPath == '/projects' ? <>
         <Image 
@@ -104,7 +86,6 @@ function MyApp({ Component, pageProps }) {
             objectFit={'cover'}
             objectPosition='center'
         />
-        {/* <div className={`top-0 left-0 right-0 bottom-0 absolute z-0 bg-gradient-to-t via-black/80 from-black`}/> */}
       </>
     }
     </div>

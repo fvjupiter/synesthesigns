@@ -4,9 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    font-family: Montserrat, system-ui, sans-serif;
+@layer base { html { font-family: Montserrat, system-ui, sans-serif; }}
+@layer components {
+  .center{
+    @apply flex items-center justify-center;
   }
 }
 
@@ -19,10 +20,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  text-decoration: none;
-  /* color: aqua; */
-}
+a { text-decoration: none; }
 
 * {
   box-sizing: border-box;
@@ -39,34 +37,23 @@ a {
           user-select: none; /* Non-prefixed version, currently
                                 supported by Chrome, Edge, Opera and Firefox */
 }
-*::-webkit-scrollbar {
-  display: none;
-}
+*::-webkit-scrollbar { display: none }
 
 .backdrop{
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
 }
+
 .invertBg {
   -webkit-backdrop-filter: hue-rotate(120deg);
   backdrop-filter: hue-rotate(120deg);
 }
-.textShadow{
-  text-shadow: 0 0 2px black, 0 0 5px black, 0 0 7px black;
-}
+
+.textShadow{ text-shadow: 0 0 2px black, 0 0 5px black, 0 0 7px black; }
 
 .synesthesigns {
   background-color: #ceff46;
   background-image: linear-gradient(45deg, rgb(255, 0, 0), rgb(255, 251, 0), rgb(136, 255, 0), rgb(0, 255, 242), rgb(132, 0, 255));
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
-}
-.textGradient{
-  background-color: #ceff46;
-  background-image: linear-gradient(90deg, white, rgb(0, 255, 242), rgb(132, 0, 255));
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;

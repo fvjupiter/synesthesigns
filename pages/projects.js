@@ -7,16 +7,22 @@ import Undercover from '../public/project-images/undercover.png'
 import Mindfunction from '../public/project-images/mindfunction.png'
 import Mathgame from '../public/project-images/mathgame.png'
 
-export default function Projects({ screenHeight, screenWidth }) {
+export default function Projects({ screen }) {
   return <>
-    <div style={{ minHeight: screenHeight -80 }}>
-      <PreviewSlide data={templateData} screen={{ height: screenHeight, width: screenWidth }}/>
+    <div style={{ minHeight: screen.height -80 }}>
+      <PreviewSlide data={templateData} screen={screen}/>
     </div>
   </>
 }
 
 const templateData = {
-  titleArr: [['Portfolio - Peter', 'https://portfolio-pp.vercel.app/'], ['Undercover Game', 'http://undercover.sup2fredy.com/'], ['Mindfunction-Test', 'http://mindfunction-test.sup2fredy.com/'], ['Mathgame', 'http://mathgame.sup2fredy.com/'], ['Community']],
+  titleArr: [
+    ['Portfolio - Peter', 'https://portfolio-pp.vercel.app/'], 
+    ['Undercover Game', 'http://undercover.sup2fredy.com/'], 
+    ['Mindfunction-Test', 'http://mindfunction-test.sup2fredy.com/'], 
+    ['Mathgame', 'http://mathgame.sup2fredy.com/'], 
+    ['Community']
+  ],
   boxList: [
     <Image className='z-0'
         src={Peter}
@@ -49,24 +55,6 @@ const templateData = {
             src={Mathgame}
             key={'3'}
             alt='3'
-            placeholder="blur"
-            layout='fill' 
-            objectFit='cover'
-            objectPosition='center'
-    />,
-    <Image className='z-0'
-            src={Diamond}
-            key={'4'}
-            alt='4'
-            placeholder="blur"
-            layout='fill' 
-            objectFit='cover'
-            objectPosition='center'
-    />,
-    <Image className='z-0'
-            src={Diamond}
-            key={'5'}
-            alt='5'
             placeholder="blur"
             layout='fill' 
             objectFit='cover'

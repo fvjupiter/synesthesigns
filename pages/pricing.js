@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PageTitle from '../components/PageTitle'
 import PricingCard from '../components/PricingCard'
 
-export default function Pricing({ screenHeight }) {
+export default function Pricing({ screen }) {
   const [price, setprice] = useState(0)
   const setPrice = val => {
       console.log('price', price)
@@ -41,12 +41,11 @@ export default function Pricing({ screenHeight }) {
   }, [])
 
   const getEmailBody = () => {
-    let body = `Option: ${data.title}; Price-prediction: ${price && price}€; Features: ${toggleData && Object.entries(toggleData).length != 0 && Object.keys(toggleData)}; Pages: ${sectionsData && sectionsData[0]};`
-    return body
+    return `Option: ${data.title}; Price-prediction: ${price && price}€; Features: ${toggleData && Object.entries(toggleData).length != 0 && Object.keys(toggleData)}; Pages: ${sectionsData && sectionsData[0]};`
   }
 
   return <>
-    <div style={{ minHeight: screenHeight -80 }} className={`pb-4`}>
+    <div style={{ minHeight: screen.height -80 }} className={`pb-4`}>
       <PageTitle title={'Calculator'}/>
       {/* sm:shadow-big */}
       <div className='w-[375px] sm:w-[640px] rounded-3xl mx-auto mt-0 sm:mt-6 pt-6'>
