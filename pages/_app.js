@@ -27,9 +27,6 @@ function MyApp({ Component, pageProps }) {
     }
   }, [asPath])
 
-  const abc = useRef()
-  const scrollUp = () => abc.current.scrollIntoView({ behavior: "smooth" })
-
   const screenRef = useRef()
   const [screen, setscreen] = useState({ height: 0, width: 0 })
   useEffect(() => {
@@ -46,11 +43,10 @@ function MyApp({ Component, pageProps }) {
       <meta name="description" content="Modern Web-Apps" />
       <link rel="icon" href="/fredy.jpeg" />
     </Head>
-    <div ref={abc} className='w-0 h-0'/>
     <div ref={screenRef} className='h-screen w-screen fixed -z-50'/>
     <TopBar id={id} setid={setid} navItems={navItems}/>
     <div className='mt-20 z-10 w-screen absolute'>
-      <Component {...pageProps} screen={screen} abc={abc} scrollUp={scrollUp}/>
+      <Component {...pageProps} screen={screen}/>
       {screen.height && <Footer />}
     </div>
     <div className='top-0 left-0 h-screen w-screen fixed z-0 bg-black'>

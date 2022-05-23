@@ -37,7 +37,7 @@ export default function PricingCard({ data, price, setToggleData, setSectionsDat
                         automatically.<br/><br/>
                         <span className='font-bold'>Install-Function:</span><br/>
                         Your Web-App will be installable on Smartphones
-                        and PC's which means that your users can use your App offline, directly
+                        and PC&apos;s which means that your users can use your App offline, directly
                         accessable through their Homescreen. The App will be updated in the background
                         if you change the content.<br/><br/>
                         <span className='font-bold'>User-Authentication:</span><br/> Users will be able to log-in to your Web-App to e.g. save,
