@@ -39,9 +39,9 @@ export default function Home({ screen }) {
         const interV = setInterval(() => {
             // console.log(abc.current.getBoundingClientRect().top)
             // console.log(-screen.height+100)
-            if(abc.current.getBoundingClientRect().top > -screen.height+80) setisScrolledToTop(true)
+            if(abc.current.getBoundingClientRect().top > -80) setisScrolledToTop(true)
             else setisScrolledToTop(false)
-        }, 250)
+        }, 500)
     
       return () => clearInterval(interV)
     }, [])
@@ -83,7 +83,7 @@ export default function Home({ screen }) {
     </div>
     <div ref={scrollRef} className='invertBg h-screen '></div>
     <div onClick={isScrolledToTop ? scrollDown : scrollUp}
-        className={`${isAnimationEnd ? `opacity-100 bottom-16 ${isScrolledToTop ? 'rotate-90' : '-rotate-90'}` : 'opacity-0 bottom-56 rotate-[270deg]'} duration-1000 group ${isScrolledToTop ? '' : ''} fixed w-20 h-20 center inset-x-1/2 -ml-10 cursor-pointer `}>
+        className={`${isAnimationEnd ? `bottom-12 rotate-90 ${isScrolledToTop ? 'opacity-100' : 'opacity-0'}` : 'opacity-0 bottom-40 rotate-[270deg]'} duration-1000 group ${isScrolledToTop ? '' : ''} fixed w-20 h-20 center inset-x-1/2 -ml-10 cursor-pointer `}>
             <MdDoubleArrow size={70} className='text-gray-200 group-hover:text-white duration-100'/>
     </div>
     </>}
