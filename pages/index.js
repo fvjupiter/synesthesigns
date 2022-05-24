@@ -75,7 +75,7 @@ export default function Home({ screen }) {
         <div ref={scrollRef} className='invertBg h-screen center'>
             <div className='w-80 sm:w-96 mx-auto border-4 border-purple-900 ring-2 ring-purple-500/50'>
                 {accordeonData.map((item, index) => (
-                    <div className={`${accordeonId == index ? 'border-white bg-black/40' : 'border-transparent bg-black/80 hover:bg-black/50'} border-t-2 border-b-2 duration-100`}>
+                    <div key={index} className={`${accordeonId == index ? 'border-white bg-black/40' : 'border-transparent bg-black/80 hover:bg-black/50'} border-t-2 border-b-2 duration-100`}>
                         <Accordeon index={index} title={item[0]} accordeonId={accordeonId} setaccordeonId={setaccordeonId}>
                             {item[1]}
                         </Accordeon>
