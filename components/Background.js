@@ -39,6 +39,7 @@ export default function Background({ asPath }) {
             />
         : <>
             <Image 
+                priority
                 src={Hacker}
                 placeholder="blur"
                 layout='fill' 

@@ -19,7 +19,7 @@ export default function Home({ screen }) {
       setTimeout(() => setisScaled(true), 100);
       setTimeout(() => setisAnimationEnd(true), 3500);
       setTimeout(() => setshowScrollButton(true), 2250);
-    }, [screen.height])
+    }, [])
 
     const buttonClassNames = `group w-40 sm:w-[288px] lg:w-80 h-16 sm:h-24
     center hover:bg-white hover:text-black duration-300 cursor-pointer`
