@@ -110,7 +110,7 @@ const accordeonData = [
     ['Responsive Design', `Web-Apps by Synesthesigns are made to work perfectly on mobile-screens and wide-screens without any function-loss`],
     ['User-Interfaces', `Synesthesigns is focused on creating efficient, simple-to-use interfaces to guarantee a great user-experience throughout the whole Web-App`],
     ['Content-Management', `Every Web-App by Synesthesigns is shipped with editor-acces via Contentful.com ® to manage all it's data. So you'll be able to update every piece of content whenever you want`],
-    ['Hosting', `Web-Apps are hosted at Vercel.com ®`],
+    ['Hosting', `Web-Apps by Synesthesigns are hosted at Vercel.com ®`],
     ['SEO', `Search-Engine-Optimization is a big deal nowadays to be fastly discoverable in Search-Engines and gain more users quickly`],
     ['Web-Games', `Synesthesigns builds small Web-Games (e.g. Text-Adventures, Click-Games) on demand`]
 ]
