@@ -19,8 +19,17 @@ export default function About({ screen }) {
           md:text-2xl sm:text-xl text-base text-justify text-white font-extralight
           border border-pink-400 rounded-3xl ring-4 bg-black bg-opacity-70 
           `}>
-          My name is Frederik Schoof, I&apos;m born in Hamburg in August 1997 and currently based in Bremen.<br/><br/>
-          In early 2019 I decided to quit my cultural science &amp; philosophy studies @Universität Bremen to work
+          Hi, I&apos;m Fredy, 24 y.o., Web-Developer &amp; Musician based in Bremen, Germany. 
+          Since I was a child I am interested in understanding the world, 
+          solving problems and creating ideas to improve, 
+          rethink and rebuild current systems. 
+          Especially the human conciousness and its similarities to software, e.g. the possibility to develop 
+          flexible, weightless concepts, I find pretty fascinating. 
+          I made the experience that both can be (more or less) easily programmed 
+          and changed to whatever you can imagine and will then take their (more or less great) impact on the world.
+          <br/><br/>
+          So back in early 2019 a friend, Denis Rysavy, inspired me to have a look on coding and faster than I could go to my next courses 
+          I decided to quit my cultural science &amp; philosophy studies @Universität Bremen to work
           as a software developer for the web.<br/>
           Since then I started with plain <A domain='https://developer.mozilla.org/en-US/docs/Web/HTML'>HTML</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/CSS'>CSS</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>JS</A> in the first year 
           and build some click-games which you can find under <span onClick={() => router.push('/projects')} className={'font-light text-blue-300 hover:text-blue-100 active:text-pink-400 cursor-pointer'}>Projects</span>.
