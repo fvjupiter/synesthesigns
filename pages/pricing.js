@@ -20,7 +20,6 @@ export default function Pricing({ screen }) {
   }
   const [sectionsData, setsectionsData] = useState([])
   const setSectionsData = (amount, val) => {
-      console.log('sectionsData', sectionsData)
       setPrice(val)
       setsectionsData([amount, amount * val])
   }
@@ -66,11 +65,11 @@ const data = {
   types: ['(Homepage, Portfolio, Blog)'],
   included: ['Individual Design', 'Mobile & Desktop Version', 'Content-Management-System'],
   extras: [
-    ['Install-Function', 150], 
-    ['Comment-Function', 250], 
-    ['User-Authentication (Log-in)', 350], 
+    ['Install-Function', 250], 
+    ['Comment-Function', 300], 
+    ['User-Authentication (Log-in)', 450], 
     ['Post-Feed-Like-System', 750], 
-    ['Individual Logo (soon)', 150]
+    ['Individual Logo', 150]
   ],
   sections: ['Pages / Sections', 1, 100],
   price: 349,

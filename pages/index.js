@@ -108,11 +108,11 @@ export default function Home({ screen }) {
 }
 
 const accordeonData = [
-    ['Web-Development', `Synesthesigns is using modern, industry-leading technologies to ship fast, reliable and secure Web-Apps like Homepages, Portfolios, Blogs that stand out to it's customers`],
+    ['Web-Development', `I am using modern, industry-leading technologies to ship fast, reliable and secure Web-Apps like Homepages, Portfolios, Blogs that stand out to it's customers`],
     ['Responsive Design', `Web-Apps by Synesthesigns are made to work perfectly on mobile-screens and wide-screens without any function-loss`],
-    ['User-Interfaces', `Synesthesigns is focused on creating efficient, simple-to-use interfaces to guarantee a great user-experience throughout the whole Web-App`],
-    ['Content-Management', `Every Web-App by Synesthesigns is shipped with editor-acces via Contentful.com ® to manage all it's data. So you'll be able to update every piece of content whenever you want`],
-    ['Hosting', `Web-Apps by Synesthesigns are hosted at Vercel.com ®`],
+    ['User-Interfaces', `I'm focused on creating efficient, simple-to-use interfaces to guarantee a great user-experience throughout the whole Web-App`],
+    ['Content-Management', `Every Web-App by Synesthesigns is shipped with editor-acces via Contentful.com ® to manage all it's data. So you'll be able to update every piece of content whenever you like`],
+    ['Hosting', `Web-Apps are hosted at Vercel.com ®`],
     ['SEO', `Search-Engine-Optimization is a big deal nowadays to be fastly discoverable in Search-Engines and gain more users quickly`],
-    ['Web-Games', `Synesthesigns builds small Web-Games (e.g. Text-Adventures, Click-Games) on demand`]
+    ['Web-Games', `I build small Web-Games (e.g. Text-Adventures, Click-Games) on demand`]
 ]
