@@ -73,7 +73,7 @@ export default function Home({ screen }) {
                 </div>
                 <div className={`${isAnimationEnd && 'animate-pulse'} hover:animate-none w-fit mx-auto`}>
                     <div onClick={isScrolledToTop ? scrollDown : null}
-                        className={`${showScrollButton ? `rotate-90 mt-0 ${isScrolledToTop ? 'opacity-100 cursor-pointer' : 'opacity-0'}` : 'opacity-0 -mt-40 rotate-[270deg]'} 
+                        className={`${showScrollButton ? `rotate-90 translate-y-0 translate-x-0 ${isScrolledToTop ? 'opacity-100 cursor-pointer' : 'opacity-0'}` : 'opacity-0 -translate-y-40 translate-x-12 rotate-[270deg]'} 
                             duration-1000 group w-20 h-20 center mx-auto`}>
                             <MdDoubleArrow size={70} className={`text-gray-200 group-hover:text-white duration-100`}/>
                     </div>
@@ -106,10 +106,11 @@ export default function Home({ screen }) {
 }
 
 const accordeonData = [
-    ['Web-Development', 'abcdsassdfg'],
-    ['Responsive Design', 'abcdsassdfg'],
-    ['User-Interfaces', 'abcdsassdfg'],
-    ['Content-Management', 'abcdsassdfg'],
-    ['Hosting', 'abcdsassdfg'],
-    ['SEO', 'abcdsassdfg']
+    ['Web-Development', `Synesthesigns is using modern, industry-leading technologies to ship fast, reliable and secure Web-Apps like Homepages, Portfolios, Blogs that stand out to it's customers`],
+    ['Responsive Design', `Web-Apps by Synesthesigns are made to work perfectly on mobile-screens and wide-screens without any function-loss`],
+    ['User-Interfaces', `Synesthesigns is focused on creating efficient, simple-to-use interfaces to guarantee a great user-experience throughout the whole Web-App`],
+    ['Content-Management', `Every Web-App by Synesthesigns is shipped with editor-acces via Contentful.com ® to manage all it's data. So you'll be able to update every piece of content whenever you want`],
+    ['Hosting', `Web-Apps are hosted at Vercel.com ®`],
+    ['SEO', `Search-Engine-Optimization is a big deal nowadays to be fastly discoverable in Search-Engines and gain more users quickly`],
+    ['Web-Games', `Synesthesigns builds small Web-Games (e.g. Text-Adventures, Click-Games) on demand`]
 ]

@@ -17,7 +17,7 @@ export default function Accordeon({ index, title, accordeonId, setaccordeonId, c
       <div 
         style={{ height: isClicked ? height : 0 }}
         className={`overflow-hidden duration-300`}>
-        <div ref={contentDiv} className='p-4 font-normal'>{children}</div>
+        <div ref={contentDiv} className='px-4 pb-4 font-normal'>{children}</div>
       </div>
     </div>
   </>
