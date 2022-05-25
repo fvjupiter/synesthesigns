@@ -33,6 +33,7 @@ export default function About({ screen }) {
           as a software developer for the web.<br/>
           Since then I started with plain <A domain='https://developer.mozilla.org/en-US/docs/Web/HTML'>HTML</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/CSS'>CSS</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>JS</A> in the first year 
           and build some click-games which you can find under <span onClick={() => router.push('/projects')} className={'font-light text-blue-300 hover:text-blue-100 active:text-pink-400 cursor-pointer'}>Projects</span>.
+          (Newer projects will be added soon...)
           I continued by understanding and using Frameworks such as <A domain='https://reactjs.org/'>React.js</A>, <A domain='https://nextjs.org/'>Next.js</A>, than added <A domain='https://tailwindcss.com/'>Tailwind.css</A> for faster styling
           as well as <A domain='https://www.contentful.com/'>Contentful</A>, <A domain='https://strapi.io/'>Strapi</A> and <A domain='https://firebase.google.com/products/firestore'>Firestore</A> for backend purposes to my skillset.<br/><br/>
           The use of these modern, industry-leading technologies has a lot of advantages over creating traditional Websites:<br/>
@@ -51,8 +52,9 @@ export default function About({ screen }) {
           create a custom calculator or even a simple game.<br/><br/>
           If you need a secure progressive Web-App with a great User-Experience hit me up 
           at <a href= "mailto:schoof.frederik@gmail.com" 
-            className='font-light text-blue-300 hover:text-blue-100 active:text-pink-400 cursor-pointer'>schoof.frederik@gmail.com</a>.
-          For further information just write me an e-mail.
+            className='font-light text-blue-300 hover:text-blue-100 active:text-pink-400 cursor-pointer'>schoof.frederik@gmail.com</a>.<br/><br/>
+
+          For further information get in contact with me by clicking the icon of your choice at the bottom.
       </div>
     </div>
   )
