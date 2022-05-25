@@ -8,7 +8,7 @@ export default function Social() {
   const [info, setinfo] = useState('')
   const Item = ({ href, newTab, infoTitle, bg, children }) => (
       <div onMouseEnter={() => setinfo(infoTitle)}
-        className={`${bg} group p-1 w-10 h-10 center rounded-xl my-2 ring-2 hover:ring-white duration-300 cursor-pointer ${info == infoTitle && 'animate-pulse'} lg:hover:animate-pulse`}>
+        className={`${bg} group p-1 w-10 h-10 center rounded-xl my-2 ring-2 hover:ring-white duration-300 cursor-pointer hover:animate-pulse`}>
         <a href={href} rel={newTab && 'noreferrer'} target={newTab && '_blank'} className='h-full w-full center'>
           {children}
         </a>
@@ -17,6 +17,7 @@ export default function Social() {
   const size = 35
 
   return <>
+    <div className={`${info != '' ? 'opacity-100' : 'opacity-0'} duration-500 text-xs font-normal`}>click icon to open</div>
     <div className='font-light h-7'>{info}</div>
     <div className={`center mx-auto w-72 justify-evenly`}>
         <Item infoTitle={'schoof.frederik@gmail.com'} href={'mailto:schoof.frederik@gmail.com'} bg={'bg-gradient-to-tr from-teal-300 to-cyan-500'}>

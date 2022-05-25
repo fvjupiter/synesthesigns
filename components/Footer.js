@@ -3,7 +3,7 @@ import Social from './Social'
 
 export default function Footer() {
   return (
-    <div className='center h-40 w-screen relative z-10 text-white bg-black border-t border-t-black'>
+    <div className='center h-56 w-screen relative -mb-96 z-10 text-white bg-black'>
         <div className='sm:text-lg text-gray-400 text-center'>
             <Social />
             <div className='font-medium'>© 2022 All Rights Reserved.</div>
