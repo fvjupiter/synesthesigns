@@ -7,7 +7,7 @@ import { BsGithub } from "react-icons/bs";
 export default function Social() {
   const [info, setinfo] = useState('')
   const Item = ({ href, newTab, infoTitle, bg, children }) => (
-      <div onMouseEnter={() => setinfo(infoTitle)}
+      <div onClick={() => setinfo(infoTitle)} onMouseEnter={() => setinfo(infoTitle)}
         className={`${bg} group p-1 w-10 h-10 center rounded-xl my-2 ring-2 hover:ring-white duration-300 cursor-pointer ${info == infoTitle && 'animate-pulse'} hover:animate-pulse`}>
         <a href={href} rel={newTab && 'noreferrer'} target={newTab && '_blank'} className='h-full w-full center'>
           {children}
