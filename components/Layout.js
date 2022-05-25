@@ -25,9 +25,9 @@ export default function Layout({ screen, children }) {
 
     return <>
         <Head>
-            <title>Web-Dev Frederik Schoof</title>
+            <title>Synesthesigns</title>
             <meta name="description" content="Modern Web-Apps" />
-            <link rel="icon" href="/fredy.jpeg" />
+            <link rel="icon" href="/favicon.ico" />
         </Head>
 
         <TopBar id={id} setid={setid} navItems={navItems}/>
