@@ -8,8 +8,7 @@ export default function Footer() {
             <Social />
             <div>© 2022 All Rights Reserved.</div>
             <div>Powered by &nbsp;
-              <a 
-                className='cursor-pointer font-medium synesthesigns' 
+              <a className='cursor-pointer font-medium synesthesigns' 
                 href="https://portfolio-fvjupiter.vercel.app/" 
                 rel="noreferrer" 
                 target='_blank'>

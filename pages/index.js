@@ -9,7 +9,11 @@ export default function Home({ screen }) {
     const [isScaled, setisScaled] = useState(false)
     const [isAnimationEnd, setisAnimationEnd] = useState(false)
     const [showScrollButton, setshowScrollButton] = useState(false)
+    const [hideScrollButton, sethideScrollButton] = useState(false)
 
+    useEffect(() => {
+        if(!isScrolledToTop) setTimeout(() => sethideScrollButton(true), 1000)
+    }, [isScrolledToTop])
     useEffect(() => {
       setisScrolledToTop(true)
       setisScaled(false)
@@ -30,8 +34,10 @@ export default function Home({ screen }) {
 
     useEffect(() => {
         const interV = setInterval(() => {
-            if(abc.current.getBoundingClientRect().top > -80) setisScrolledToTop(true)
-            else setisScrolledToTop(false)
+            if(abc.current.getBoundingClientRect().top > -80) {
+                sethideScrollButton(false)
+                setTimeout(() => setisScrolledToTop(true), 500)
+            } else setisScrolledToTop(false)
         }, 500)
     
       return () => clearInterval(interV)
@@ -65,26 +71,33 @@ export default function Home({ screen }) {
                     </Link>
                 </div>
                 <div className={`${isScaled ? `opacity-100 ${!isAnimationEnd && 'duration-[2500ms] delay-[1000ms]'}` : 'opacity-0'} 
-                    mt-4 mb-3 text-4xl sm:text-6xl mx-auto w-fit 
+                    mt-4 text-4xl sm:text-6xl mx-auto w-fit 
                     hover:text-white text-gray-100 textShadow 
                     duration-300 cursor-pointer overflow-hidden rounded-2xl`}>
-                    <Link href={'/about'}><span className=''>Frederik Schoof</span></Link>
+                    <Link href={'/about'}><div className=''>Frederik Schoof</div></Link>
+                    <div className='h-1 bg-white ring-4 ring-cyan-500/50 rounded-3xl my-2 mt-3 w-10/12 mx-auto'/>
+                    <div className='text-2xl font-medium text-center textShadow'>Web-Developer</div>
                 </div>
             </div>
         </div>
         <div ref={scrollRef} className='invertBg h-screen center'>
-            <div className='w-80 sm:w-96 mx-auto border-4 border-purple-900 ring-2 ring-purple-500/50'>
-                {accordeonData.map((item, index) => (
-                    <div key={index} className={`${accordeonId == index ? 'border-white bg-black/40' : 'border-transparent bg-black/80 hover:bg-black/50'} border-t-2 border-b-2 duration-100`}>
-                        <Accordeon index={index} title={item[0]} accordeonId={accordeonId} setaccordeonId={setaccordeonId}>
-                            {item[1]}
-                        </Accordeon>
-                    </div>
-                ))}
+            <div>
+                <div className='text-5xl text-center text-white mb-2 font-light textShadow'>What I do</div>
+                <div className='h-1 bg-white ring-4 ring-purple-500/50 rounded-3xl mb-4 w-10/12 mx-auto'/>
+                <div className='w-80 sm:w-96 mx-auto border border-purple-900 ring-2 ring-purple-500/50 rounded-2xl overflow-hidden'>
+                    {accordeonData.map((item, index) => (
+                        <div key={index} className={`${accordeonId == index ? `border-white bg-black/50` : 'border-transparent bg-black/80 hover:bg-black/50'} ${index != 0 && 'border-t'} ${index != accordeonData.length -1 && 'border-b'} duration-100`}>
+                            <Accordeon index={index} title={item[0]} accordeonId={accordeonId} setaccordeonId={setaccordeonId} clickAnywhere>
+                                {item[1]}
+                            </Accordeon>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
         <div onClick={isScrolledToTop ? scrollDown : null}
             className={`${showScrollButton ? `bottom-12 rotate-90 -ml-10 ${isScrolledToTop ? 'opacity-100 cursor-pointer' : 'opacity-0'}` : 'opacity-0 bottom-40 sm:bottom-56 rotate-[270deg]'} 
+                ${hideScrollButton ? 'hidden' : 'visible'}
                 duration-1000 group ${isScrolledToTop ? '' : ''} fixed w-20 h-20 center inset-x-1/2`}>
                 <MdDoubleArrow size={70} className='text-gray-200 group-hover:text-white duration-100'/>
         </div>
@@ -94,17 +107,9 @@ export default function Home({ screen }) {
 
 const accordeonData = [
     ['Web-Development', 'abcdsassdfg'],
-    ['Creative Design', 'abcdsassdfg'],
+    ['Responsive Design', 'abcdsassdfg'],
     ['User-Interfaces', 'abcdsassdfg'],
     ['Content-Management', 'abcdsassdfg'],
     ['Hosting', 'abcdsassdfg'],
     ['SEO', 'abcdsassdfg']
-]
-const lineArr = [
-    `Content-Management`,
-    `Web-Development`, 
-    `Creative Design`,
-    `User-Interfaces`,
-    `Hosting`,
-    `SEO`,
 ]
