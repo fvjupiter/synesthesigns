@@ -65,7 +65,13 @@ const data = {
   title: 'Web-App',
   types: ['(Homepage, Portfolio, Blog)'],
   included: ['Individual Design', 'Mobile & Desktop Version', 'Content-Management-System'],
-  extras: [['Install-Function', 150], ['Comment-Function', 150], ['User-Authentication (Log-in)', 350], ['Post-Feed-Like-System', 500], ['Individual Logo', 150]],
+  extras: [
+    ['Install-Function', 150], 
+    ['Comment-Function', 250], 
+    ['User-Authentication (Log-in)', 350], 
+    ['Post-Feed-Like-System', 750], 
+    ['Individual Logo (soon)', 150]
+  ],
   sections: ['Pages / Sections', 1, 100],
   price: 349,
 }

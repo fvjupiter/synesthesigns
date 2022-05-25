@@ -40,12 +40,14 @@ export default function Home({ screen }) {
     {screen.height && <><div ref={abc} className='w-0 h-0 -mt-20 mb-20'/>
         <div style={{ minHeight: screen.height -80 }} className='center no-select'>
             <div>
-                <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-[0.5] opacity-0'} 
-                    h-fit w-fit mx-auto text-5xl sm:text-7xl py-3 sm:py-4 px-2 sm:px-16 md:px-8 md:text-8xl 
-                    bg-black bg-opacity-30 backdrop overflow-hidden 
-                    rounded-2xl border border-white ring-4 ring-cyan-500/50 shadow-2xl duration-[1500ms]`}>
-                    <div className='synesthesigns cursor-default'>SYNESTHESIGNS</div>
-                </div>
+                <a href="https://synesthesigns.com/">
+                    <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-[0.5] opacity-0'} 
+                        h-fit w-fit mx-auto text-5xl sm:text-7xl py-3 sm:py-4 px-2 sm:px-16 md:px-8 md:text-8xl 
+                        bg-black bg-opacity-30 backdrop overflow-hidden cursor-pointer
+                        rounded-2xl border border-white ring-4 ring-cyan-500/50 shadow-2xl duration-[1500ms]`}>
+                        <div className='synesthesigns cursor-pointer'>SYNESTHESIGNS</div>
+                    </div>
+                </a>
                 <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-75 opacity-0'} 
                     border ring-4 ring-cyan-500/50 rounded-xl border-white bg-black bg-opacity-30 backdrop 
                     text-white font-extralight text-3xl sm:text-5xl 
