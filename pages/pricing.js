@@ -48,7 +48,7 @@ export default function Pricing({ screen }) {
       <div className='rounded-3xl mx-auto mt-6'>
         <PricingCard data={data} price={price} setToggleData={setToggleData} setSectionsData={setSectionsData}/>
         <a href={`mailto:schoof.frederik@gmail.com?subject=Web-App Request&body=${getEmailBody()}`}>
-            <div className={`scale-[1] mt-6 text-xl bg-lime-400 hover:bg-lime-200
+            <div className={`scale-[1] mt-4 sm:mt-6 text-xl bg-lime-400 hover:bg-lime-200
                 shadow-3xl hover:shadow-none rounded-3xl duration-300
                 px-4 py-2 mx-auto sm:mb-2
                 text-black font-bold 

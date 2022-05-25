@@ -9,7 +9,7 @@ import Mathgame from '../public/project-images/mathgame.png'
 
 export default function Projects({ screen }) {
   return <>
-    <div style={{ minHeight: screen.height -80 }}>
+    <div style={{ minHeight: screen.height -80 }} className='no-select'>
       <PreviewSlide data={templateData} screen={screen}/>
     </div>
   </>

@@ -9,11 +9,7 @@ export default function Home({ screen }) {
     const [isScaled, setisScaled] = useState(false)
     const [isAnimationEnd, setisAnimationEnd] = useState(false)
     const [showScrollButton, setshowScrollButton] = useState(false)
-    const [hideScrollButton, sethideScrollButton] = useState(false)
 
-    useEffect(() => {
-        if(!isScrolledToTop) setTimeout(() => sethideScrollButton(true), 1000)
-    }, [isScrolledToTop])
     useEffect(() => {
       setisScrolledToTop(true)
       setisScaled(false)
@@ -34,18 +30,15 @@ export default function Home({ screen }) {
 
     useEffect(() => {
         const interV = setInterval(() => {
-            if(abc.current.getBoundingClientRect().top > -80) {
-                sethideScrollButton(false)
-                setTimeout(() => setisScrolledToTop(true), 500)
-            } else setisScrolledToTop(false)
+            if(abc.current.getBoundingClientRect().top > -80) setisScrolledToTop(true)
+            else setisScrolledToTop(false)
         }, 500)
-    
       return () => clearInterval(interV)
     }, [])
 
   return <>
     {screen.height && <><div ref={abc} className='w-0 h-0 -mt-20 mb-20'/>
-        <div style={{ minHeight: screen.height -80 }} className='center'>
+        <div style={{ minHeight: screen.height -80 }} className='center no-select'>
             <div>
                 <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-[0.5] opacity-0'} 
                     h-fit w-fit mx-auto text-5xl sm:text-7xl py-3 sm:py-4 px-2 sm:px-16 md:px-8 md:text-8xl 
@@ -75,18 +68,31 @@ export default function Home({ screen }) {
                     hover:text-white text-gray-100 textShadow 
                     duration-300 cursor-pointer overflow-hidden rounded-2xl`}>
                     <Link href={'/about'}><div className=''>Frederik Schoof</div></Link>
-                    <div className='h-1 bg-white ring-4 ring-cyan-500/50 rounded-3xl my-2 mt-3 w-10/12 mx-auto'/>
+                    <div className={`h-1 bg-white ring-4 rounded-3xl my-2 mt-3 ${isAnimationEnd ? 'w-10/12 ring-cyan-500/50' : 'w-0 ring-transparent'} mx-auto duration-500`}/>
                     <div className='text-2xl font-medium text-center textShadow'>Web-Developer</div>
+                </div>
+                <div className={`${isAnimationEnd && 'animate-pulse'} hover:animate-none w-fit mx-auto`}>
+                    <div onClick={isScrolledToTop ? scrollDown : null}
+                        className={`${showScrollButton ? `rotate-90 mt-0 ${isScrolledToTop ? 'opacity-100 cursor-pointer' : 'opacity-0'}` : 'opacity-0 -mt-40 rotate-[270deg]'} 
+                            duration-1000 group w-20 h-20 center mx-auto`}>
+                            <MdDoubleArrow size={70} className={`text-gray-200 group-hover:text-white duration-100`}/>
+                    </div>
                 </div>
             </div>
         </div>
         <div ref={scrollRef} className='invertBg h-screen center'>
             <div>
                 <div className='text-5xl text-center text-white mb-2 font-light textShadow'>What I do</div>
-                <div className='h-1 bg-white ring-4 ring-purple-500/50 rounded-3xl mb-4 w-10/12 mx-auto'/>
+                <div className={`h-1 bg-white ring-4 rounded-3xl mb-4 ${!isScrolledToTop ? 'w-10/12 ring-purple-500/50' : 'w-0 ring-transparent'} mx-auto delay-200 duration-500`}/>
                 <div className='w-80 sm:w-96 mx-auto border border-purple-900 ring-2 ring-purple-500/50 rounded-2xl overflow-hidden'>
                     {accordeonData.map((item, index) => (
-                        <div key={index} className={`${accordeonId == index ? `border-white bg-black/50` : 'border-transparent bg-black/80 hover:bg-black/50'} ${index != 0 && 'border-t'} ${index != accordeonData.length -1 && 'border-b'} duration-100`}>
+                        <div key={index} 
+                            className={`${accordeonId == index ? `border-white bg-black/50` 
+                                : 'border-transparent bg-black/80 hover:bg-black/50'} 
+                                ${index != 0 && 'border-t'} 
+                                ${index != accordeonData.length -1 && 'border-b'} 
+                                duration-100`
+                            }>
                             <Accordeon index={index} title={item[0]} accordeonId={accordeonId} setaccordeonId={setaccordeonId} clickAnywhere>
                                 {item[1]}
                             </Accordeon>
@@ -94,12 +100,6 @@ export default function Home({ screen }) {
                     ))}
                 </div>
             </div>
-        </div>
-        <div onClick={isScrolledToTop ? scrollDown : null}
-            className={`${showScrollButton ? `bottom-12 rotate-90 -ml-10 ${isScrolledToTop ? 'opacity-100 cursor-pointer' : 'opacity-0'}` : 'opacity-0 bottom-40 sm:bottom-56 rotate-[270deg]'} 
-                ${hideScrollButton ? 'hidden' : 'visible'}
-                duration-1000 group ${isScrolledToTop ? '' : ''} fixed w-20 h-20 center inset-x-1/2`}>
-                <MdDoubleArrow size={70} className='text-gray-200 group-hover:text-white duration-100'/>
         </div>
     </>}
   </>

@@ -9,7 +9,7 @@ export default function About({ screen }) {
         {children}
   </a>
   return (
-    <div style={{ minHeight: screen.height -80 }} className={``}>
+    <div style={{ minHeight: screen.height -80 }} className={`no-select`}>
       <div 
         style={{ marginTop: screen.height -200 }} 
         className={`backdrop w-11/12 mx-auto sm:w-[620px] md:w-[748px] 

@@ -27,7 +27,7 @@ export default function Background({ asPath }) {
                 objectFit={'cover'}
                 objectPosition='center'
             />
-            <div className={`top-0 left-0 right-0 bottom-0 absolute z-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 sm:from-transparent sm:via-transparent sm:to-transparent`}/>
+            <div className={`top-0 left-0 right-0 bottom-0 absolute z-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80`}/>
         </>
         : asPath == '/about' ?
             <Image 
