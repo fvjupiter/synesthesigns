@@ -28,7 +28,7 @@ export default function About({ screen }) {
           I made the experience that both can be (more or less) easily programmed 
           and changed to whatever you can imagine and will then take their (more or less great) impact on the world.
           <br/><br/>
-          So back in early 2019 a friend, Denis Rysavy, inspired me to have a look on coding and faster than I could go to my next courses 
+          So, back in early 2019 a friend, Denis Rysavy, inspired me to have a look on coding and faster than I could go to my next courses 
           I decided to quit my cultural science &amp; philosophy studies @Universität Bremen to work
           as a software developer for the web.<br/>
           Since then I started with plain <A domain='https://developer.mozilla.org/en-US/docs/Web/HTML'>HTML</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/CSS'>CSS</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>JS</A> in the first year 
@@ -40,7 +40,7 @@ export default function About({ screen }) {
               <li className='font-light list-disc'>Faster loading times</li>
               <li className='font-light list-disc'>Improved security</li>
               <li className='font-light list-disc'>Greater stability</li>
-              <li className='font-light list-disc'>Way more flexible</li>
+              <li className='font-light list-disc'>Way more flexibility</li>
               <li className='font-light list-disc'>Lightweight (requires less code)</li>
               <li className='font-light list-disc'>Scalability</li>
           </ul>

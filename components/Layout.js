@@ -33,7 +33,7 @@ export default function Layout({ screen, children }) {
         <TopBar id={id} setid={setid} navItems={navItems}/>
 
         <div className='mt-20 z-10 w-screen absolute'>
-            {children}
+            {screen.height && children}
             {screen.height && <Footer />}
         </div>
 
