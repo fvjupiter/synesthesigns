@@ -21,7 +21,7 @@ export default function Home({ screen }) {
       setTimeout(() => setshowScrollButton(true), 2250);
     }, [])
 
-    const buttonClassNames = `group w-40 sm:w-[288px] lg:w-80 h-16 sm:h-24
+    const buttonClassNames = `group w-40 sm:w-[288px] lg:w-72 h-16 sm:h-24
     center hover:bg-white hover:text-black duration-300 cursor-pointer`
 
     const abc = useRef()
@@ -41,7 +41,7 @@ export default function Home({ screen }) {
         <div style={{ minHeight: screen.height -80 }} className='center no-select'>
             <div>
                 <a href="https://synesthesigns.com/">
-                    <div className={`${isScaled ? 'scale-100 opacity-100' : 'scale-[0.5] opacity-0'} 
+                    <div style={{ fontSize: screen.width < 375 ? 44 : screen.width < 640 ? 50 : screen.width < 768 ? 70 : 80 }} className={`${isScaled ? 'scale-100 opacity-100' : 'scale-[0.5] opacity-0'} 
                         h-fit w-fit mx-auto text-5xl sm:text-7xl py-3 sm:py-4 px-2 sm:px-16 md:px-8 md:text-8xl 
                         bg-black bg-opacity-30 backdrop overflow-hidden cursor-pointer
                         rounded-2xl border border-white ring-4 ring-cyan-500/50 shadow-2xl duration-[1500ms]`}>
@@ -111,8 +111,8 @@ const accordeonData = [
     ['Web-Development', `I am using modern, industry-leading technologies to ship fast, reliable and secure Web-Apps like Homepages, Portfolios, Blogs that stand out to it's customers`],
     ['Responsive Design', `Web-Apps by Synesthesigns are made to work perfectly on mobile-screens and wide-screens without any function-loss`],
     ['User-Interfaces', `I'm focused on creating efficient, simple-to-use interfaces to guarantee a great user-experience throughout the whole Web-App`],
-    ['Content-Management', `Every Web-App by Synesthesigns is shipped with editor-acces via Contentful.com ® to manage all it's data. So you'll be able to update every piece of content whenever you like`],
-    ['Hosting', `Web-Apps are hosted at Vercel.com ®`],
+    ['Content-Management', `Every Web-App by Synesthesigns is shipped with free editor-access via Contentful.com ® to manage all it's data. So you'll be able to update every piece of content whenever you like`],
+    ['Hosting', `Web-Apps are hosted at Vercel.com ®, where you can use purchase your own domain for roundabout 20€ / year or use a free domain with a 'vercel.app'-ending`],
     ['SEO', `Search-Engine-Optimization is a big deal nowadays to be fastly discoverable in Search-Engines and gain more users quickly`],
     ['Web-Games', `I build small Web-Games (e.g. Text-Adventures, Click-Games) on demand`]
 ]

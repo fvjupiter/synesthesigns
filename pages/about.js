@@ -28,7 +28,7 @@ export default function About({ screen }) {
           I made the experience that both can be (more or less) easily programmed 
           and changed to whatever you can imagine and will then take their (more or less great) impact on the world.
           <br/><br/>
-          So, back in early 2019 a friend, Denis Rysavy, inspired me to have a look on coding and faster than I could go to my next courses 
+          So, back in early 2019 a friend, <A domain={'https://github.com/rysavy122'}>Denis Rysavy</A>, inspired me to have a look on coding and faster than I could go to my next courses 
           I decided to quit my cultural science &amp; philosophy studies @Universität Bremen to work
           as a software developer for the web.<br/>
           Since then I started with plain <A domain='https://developer.mozilla.org/en-US/docs/Web/HTML'>HTML</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/CSS'>CSS</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>JS</A> in the first year 
@@ -47,7 +47,7 @@ export default function About({ screen }) {
           </ul>
           <br/><br/>
           You may ask yourself why wouldn&apos;t you just use an Editor like Wordpress and there is a simple <A domain='https://withloveinternet.com/blog/what-should-you-choose-wordpress-vs.-react-frameworks'>answer</A> to this:<br/>
-          Wordpress does takes the traditional, outdated way of creating Websites and therefore suffer in terms of speed and security.
+          Wordpress does take the traditional, outdated way of creating Websites and therefore suffer in terms of speed and security.
           Another aspect is, that you&apos;re bound to the design-elements and plug-ins that the editor provides which are most of the time also pretty weight-heavy. Imagine you would like to have a shuffle-button to mix the order of your photos, 
           create a custom calculator or even a simple game.<br/><br/>
           If you need a secure progressive Web-App with a great User-Experience hit me up 
