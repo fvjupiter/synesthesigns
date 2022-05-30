@@ -21,8 +21,7 @@ export default function About({ screen }) {
           `}>
           Hi, I&apos;m Fredy, 24 y.o., Web-Developer &amp; Musician based in Bremen, Germany. 
           Since I was a child I am interested in understanding the world, 
-          solving problems and creating ideas to improve, 
-          rethink and rebuild current systems. 
+          solving problems and creating new ideas or rethink and rebuild current systems. 
           Especially the human concioussness and its similarities to software, e.g. the possibility to develop 
           flexible, weightless concepts, I find pretty fascinating. 
           I made the experience that both can be (more or less) easily programmed 
