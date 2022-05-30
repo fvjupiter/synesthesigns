@@ -23,10 +23,10 @@ export default function About({ screen }) {
           Since I was a child I am interested in understanding the world, 
           solving problems and creating ideas to improve, 
           rethink and rebuild current systems. 
-          Especially the human conciousness and its similarities to software, e.g. the possibility to develop 
+          Especially the human concioussness and its similarities to software, e.g. the possibility to develop 
           flexible, weightless concepts, I find pretty fascinating. 
           I made the experience that both can be (more or less) easily programmed 
-          and changed to whatever you can imagine and will then take their (more or less great) impact on the world.
+          and changed to whatever you can imagine and will than take their (more or less great) impact on the world ;-)
           <br/><br/>
           So, back in early 2019 a friend, <A domain={'https://github.com/rysavy122'}>Denis Rysavy</A>, inspired me to have a look on coding and faster than I could go to my next courses 
           I decided to quit my cultural science &amp; philosophy studies @Universität Bremen to work
@@ -34,7 +34,7 @@ export default function About({ screen }) {
           Since then I started with plain <A domain='https://developer.mozilla.org/en-US/docs/Web/HTML'>HTML</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/CSS'>CSS</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>JS</A> in the first year 
           and build some click-games which you can find under <span onClick={() => router.push('/projects')} className={'font-light text-blue-300 hover:text-blue-100 active:text-pink-400 cursor-pointer'}>Projects</span>.
           (Newer projects will be added soon...)
-          I continued by understanding and using Frameworks such as <A domain='https://reactjs.org/'>React.js</A>, <A domain='https://nextjs.org/'>Next.js</A>, than added <A domain='https://tailwindcss.com/'>Tailwind.css</A> for faster styling
+          I continued by understanding and using Frameworks such as <A domain='https://reactjs.org/'>React.js</A>, <A domain='https://nextjs.org/'>Next.js</A>, <A domain={'https://recoiljs.org/'}>Recoil.js</A>, than added <A domain='https://tailwindcss.com/'>Tailwind.css</A> for faster styling
           as well as <A domain='https://www.contentful.com/'>Contentful</A>, <A domain='https://strapi.io/'>Strapi</A> and <A domain='https://firebase.google.com/products/firestore'>Firestore</A> for backend purposes to my skillset.<br/><br/>
           The use of these modern, industry-leading technologies has a lot of advantages over creating traditional Websites:<br/>
           <ul className='py-4 px-6'>
