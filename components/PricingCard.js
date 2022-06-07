@@ -4,6 +4,7 @@ import PricingInfo from './PricingInfo'
 
 export default function PricingCard({ data, price, setToggleData, setSectionsData }) {
     const [isCardInfo, setisCardInfo] = useState(false)
+    const [isAnimationInfo, setisAnimationInfo] = useState(true)
     useEffect(() => setisCardInfo(false), [])
     
     return <>
@@ -12,9 +13,13 @@ export default function PricingCard({ data, price, setToggleData, setSectionsDat
                 overflow-hidden border ring-2 duration-300 rounded-3xl w-[356px] sm:w-96 py-4
             `}
             >
-            <div onClick={() => setisCardInfo(!isCardInfo)}
+            <div onClick={() => { setisCardInfo(!isCardInfo); setisAnimationInfo(false) }}
                 className={`
-                    ${isCardInfo ? 'hover:text-red-600 text-red-800 active:shadow-answers-inner' : 'hover:bg-lime-100 bg-lime-300 text-black shadow-answers active:shadow-none'}
+                    ${isCardInfo ? 
+                        'hover:text-red-600 text-red-800 active:shadow-answers-inner' 
+                        : `${isAnimationInfo && 'animate-pulse hover:animate-none'} 
+                            hover:bg-lime-100 bg-lime-300 text-black shadow-answers active:shadow-none
+                        `}
                     duration-300 rounded-full ml-4 w-8 h-8 group flex justify-center items-center
                     overflow-hidden cursor-pointer
                 `}>

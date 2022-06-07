@@ -40,7 +40,7 @@ export default function PricingInfo({ isCardInfo }) {
                     IM3K - Designs
             </a> (available soon)<br/><br/>
             <span className='font-bold'>Individual Design:</span><br/>
-            You can choose how much you want to decide on the design-aspects of your Web-App or leave it commpletely open to Synesthesigns ;-)
+            You can choose how much you want to decide on the design-aspects of your Web-App or leave it completely open to Synesthesigns ;-)
             
             <ul className='px-4 mt-8'>
                 <li className='font-light list-decimal'>Add or remove <span className='font-bold'>features &amp; pages</span> (a page / section is an area on the Web-App e.g. <span className='font-bold'>Home</span>, <span className='font-bold'>About</span> or an <span className='font-bold'>Image-Gallery</span>. Synesthesigns e.g. is 
