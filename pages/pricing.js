@@ -66,9 +66,9 @@ const data = {
   included: ['Individual Design', 'Mobile & Desktop Version', 'Content-Management-System'],
   extras: [
     ['Install-Function', 250], 
+    ['User-Authentication (Log-in)', 250], 
     ['Comment-Function', 300], 
-    ['User-Authentication (Log-in)', 450], 
-    ['Post-Feed-Like-System', 750], 
+    ['Post-Feed-Like-System', 500], 
     ['Individual Logo', 150]
   ],
   sections: ['Pages / Sections', 1, 100],
