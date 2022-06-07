@@ -20,7 +20,15 @@ export default function PricingInfo({ isCardInfo }) {
             Your Web-App will be installable on Smartphones
             and PC&apos;s which means that your users can use your App offline, directly
             accessable through their Homescreen. The App will be updated in the background
-            if you change the content.<br/><br/>
+            if you change the content.<br/>
+            Check it out <a 
+                href="https://sup2fredy.vercel.app/" 
+                rel="noreferrer" 
+                target='_blank' 
+                className='font-medium text-lime-300 hover:text-lime-100 active:text-cyan-400 cursor-pointer'>
+                    @sup2fredy
+            </a>&nbsp;(click &apos;add to Homescreen&apos; in your browser to install the app on your smartphone)
+            <br/><br/>
             <span className='font-bold'>User-Authentication:</span><br/> Users will be able to log-in to your Web-App to e.g. save,
             comment and like your posts.<br/><br/>
             <span className='font-bold'>Individual Logo:</span><br/>

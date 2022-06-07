@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import PreviewSlide from '../components/PreviewSlide'
 import Diamond from '../public/diamond.jpg'
+import Sup2Fredy from '../public/project-images/sup2fredy.png'
 import Peter from '../public/project-images/peter.png'
 import Undercover from '../public/project-images/undercover.png'
 import Mindfunction from '../public/project-images/mindfunction.png'
@@ -17,6 +18,7 @@ export default function Projects({ screen }) {
 
 const templateData = {
   titleArr: [
+    ['Blog - Sup2Fredy', 'https://sup2fredy.vercel.app/'], 
     ['Portfolio - Peter', 'https://portfolio-pp.vercel.app/'], 
     ['Undercover Game', 'http://undercover.sup2fredy.com/'], 
     ['Mindfunction-Test', 'http://mindfunction-test.sup2fredy.com/'], 
@@ -24,6 +26,15 @@ const templateData = {
     ['Community']
   ],
   boxList: [
+    <Image className='z-0'
+        src={Sup2Fredy}
+        key={'0.1'}
+        alt='0.1'
+        placeholder="blur"
+        layout='fill' 
+        objectFit='cover'
+        objectPosition='center'
+    />,
     <Image className='z-0'
         src={Peter}
         key={'0'}
