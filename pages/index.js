@@ -108,11 +108,10 @@ export default function Home({ screen }) {
 }
 
 const accordeonData = [
-    ['Web-Development', `I am using modern, industry-leading technologies to ship fast, reliable and secure Web-Apps like Homepages, Portfolios, Blogs that stand out to it's customers`],
-    ['Responsive Design', `Web-Apps by Synesthesigns are made to work perfectly on mobile-screens and wide-screens without any function-loss`],
-    ['User-Interfaces', `I'm focused on creating efficient, simple-to-use interfaces to guarantee a great user-experience throughout the whole Web-App`],
-    ['Content-Management', `Every Web-App by Synesthesigns is shipped with free editor-access via Contentful.com ® to manage all it's data. So you'll be able to update every piece of content whenever you like`],
-    ['Hosting', `Web-Apps are hosted at Vercel.com ®, where you can use purchase your own domain for roundabout 20€ / year or use a free domain with a 'vercel.app'-ending`],
-    ['SEO', `Search-Engine-Optimization is a big deal nowadays to be fastly discoverable in Search-Engines and gain more users quickly`],
-    ['Web-Games', `I build small Web-Games (e.g. Text-Adventures, Click-Games) on demand`]
+    ['Web-Development', `I am using modern, industry-leading technologies to ship fast, reliable and secure Web-Apps like Homepages, Portfolios, Blogs, that stand out to it's visitors`],
+    ['Responsive Design', `Web-Apps by Synesthesigns are made to work on mobile-screens as well as bigger desktop-screens without any function-loss`],
+    ['User-Interfaces', `I'm focused on creating intuitive, simple-to-use interfaces to guarantee a great user-experience throughout the whole page`],
+    ['Content-Management', `Every Web-App is shipped with free editor-access via Contentful.com ® to manage all it's data. So you'll be able to update every piece of content whenever you like without writing one line of code`],
+    ['Hosting', `Web-Apps are hosted at Vercel.com ®, where you can purchase your own domain for roundabout 20€ / year or use a free domain with a 'vercel.app'-ending`],
+    ['SEO', `Search-Engine-Optimization is a big deal nowadays to be fastly discoverable in Search-Engines and gain more users quickly`]
 ]
