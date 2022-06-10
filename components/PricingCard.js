@@ -5,7 +5,10 @@ import PricingInfo from './PricingInfo'
 export default function PricingCard({ data, price, setToggleData, setSectionsData }) {
     const [isCardInfo, setisCardInfo] = useState(false)
     const [isAnimationInfo, setisAnimationInfo] = useState(true)
-    useEffect(() => setisCardInfo(false), [])
+    useEffect(() => {
+        setisCardInfo(false)
+        setisAnimationInfo(true)
+    }, [])
     
     return <>
         <div className={` bg-black backdrop bg-opacity-50 ring-black/70 ${isCardInfo ? 'border-lime-200' : 'border-lime-300'}
