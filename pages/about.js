@@ -28,7 +28,7 @@ export default function About({ screen }) {
           and changed to whatever you can imagine and will than take their (more or less great) impact on the world ;-)
           <br/><br/>
           So, back in early 2019 a friend, <A domain={'https://github.com/rysavy122'}>Denis Rysavy</A>, inspired me to have a look on coding and faster than I could go to my next courses 
-          I decided to quit my cultural science &amp; philosophy studies @Universität Bremen to work
+          I decided to change my cultural science &amp; philosophy studies @Universität Bremen to computer science to work
           as a software developer for the web.<br/>
           Since then I started with plain <A domain='https://developer.mozilla.org/en-US/docs/Web/HTML'>HTML</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/CSS'>CSS</A>, <A domain='https://developer.mozilla.org/en-US/docs/Web/JavaScript'>JS</A> in the first year 
           and build some click-games which you can find under <span onClick={() => router.push('/projects')} className={'font-light text-blue-300 hover:text-blue-100 active:text-pink-400 cursor-pointer'}>Projects</span>.

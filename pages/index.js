@@ -60,7 +60,7 @@ export default function Home({ screen }) {
                     <Link href={'/pricing'}>
                         <div className={`${buttonClassNames} 
                             ${isScaled ? `scale-100 opacity-100 ${!isAnimationEnd && 'delay-[2000ms]'}` : 'scale-[2] opacity-0 delay-[3000ms]'} 
-                            duration-300 hover:text-black`}>
+                          hover:text-black`}>
                             Hire me
                         </div>
                     </Link>
@@ -89,8 +89,8 @@ export default function Home({ screen }) {
                 <div className='w-80 sm:w-96 mx-auto border border-purple-900 ring-2 ring-purple-500/50 rounded-2xl overflow-hidden'>
                     {accordeonData.map((item, index) => (
                         <div key={index} 
-                            className={`${accordeonId == index ? `border-white bg-black/50` 
-                                : 'border-transparent bg-black/80 hover:bg-black/50'} 
+                            className={`${accordeonId == index ? `border-white bg-black/70` 
+                                : 'border-transparent bg-black/50 hover:bg-black/70'} 
                                 ${index != 0 && 'border-t'} 
                                 ${index != accordeonData.length -1 && 'border-b'} 
                                 duration-100`
@@ -100,6 +100,23 @@ export default function Home({ screen }) {
                             </Accordeon>
                         </div>
                     ))}
+                </div>
+                <div className={`
+                    border ring-4 ring-purple-500/50 rounded-xl border-white bg-black bg-opacity-70 
+                    text-white font-extralight text-3xl sm:text-4xl 
+                    flex w-fit mt-8 my-2 mx-auto
+                    overflow-hidden
+                `}>
+                    <Link href={'/projects'}>
+                        <div className={`group w-40 sm:w-48 h-16 sm:h-20
+                            center hover:bg-white hover:text-black duration-300 cursor-pointer`}>My work</div>
+                    </Link>
+                    <Link href={'/pricing'}>
+                        <div className={`group w-40 sm:w-48 h-16 sm:h-20
+                            center hover:bg-white hover:text-black duration-300 cursor-pointer`}>
+                            Hire me
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
