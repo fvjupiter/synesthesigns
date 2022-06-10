@@ -65,10 +65,10 @@ const data = {
   types: ['(Homepage, Portfolio, Blog)'],
   included: ['Individual Design', 'Mobile & Desktop Version', 'Content-Management-System'],
   extras: [
-    ['Install-Function', 250], 
-    ['User-Authentication (Log-in)', 250], 
-    ['Comment-Function', 300], 
-    ['Post-Feed-Like-System', 500], 
+    ['Install-Function', 200], 
+    ['User-Authentication (Log-in)', 200], 
+    ['Comment-Function', 200], 
+    ['Post-Feed-Like-System', 400],
     ['Individual Logo', 150]
   ],
   sections: ['Pages / Sections', 1, 100],
