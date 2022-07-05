@@ -38,6 +38,15 @@ const templateData = {
         objectPosition='center'
     />,
     <Image className='z-0'
+        src={Im3k}
+        key={'0.11'}
+        alt='0.11'
+        placeholder="blur"
+        layout='fill' 
+        objectFit='cover'
+        objectPosition='center'
+    />,
+    <Image className='z-0'
         src={Peter}
         key={'0'}
         alt='0'

@@ -33,7 +33,7 @@ export default function PricingInfo({ isCardInfo }) {
             comment and like your posts.<br/><br/>
             <span className='font-bold'>Individual Logo:</span><br/>
             Creation of your custom logo by <a 
-                href="https://synesthesigns.com/" 
+                href="https://portfolio-im3k.vercel.app" 
                 rel="noreferrer" 
                 target='_blank' 
                 className='font-medium text-lime-300 hover:text-lime-100 active:text-cyan-400 cursor-pointer'>
