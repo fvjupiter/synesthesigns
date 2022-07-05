@@ -7,6 +7,7 @@ import Peter from '../public/project-images/peter.png'
 import Undercover from '../public/project-images/undercover.png'
 import Mindfunction from '../public/project-images/mindfunction.png'
 import Mathgame from '../public/project-images/mathgame.png'
+import Im3k from '../public/project-images/im3k.png'
 
 export default function Projects({ screen }) {
   return <>
@@ -18,8 +19,9 @@ export default function Projects({ screen }) {
 
 const templateData = {
   titleArr: [
-    ['Blog - Sup2Fredy', 'https://sup2fredy.vercel.app/'], 
-    ['Portfolio - Peter', 'https://portfolio-pp.vercel.app/'], 
+    ['Blog - Sup2Fredy', 'https://sup2fredy.vercel.app/'],
+    ['IM3K Designs', 'https://portfolio-im3k.vercel.app'], 
+    ['Portfolio - Peter', 'https://www.peterpflugler.com'], 
     ['Undercover Game', 'http://undercover.sup2fredy.com/'], 
     ['Mindfunction-Test', 'http://mindfunction-test.sup2fredy.com/'], 
     ['Mathgame', 'http://mathgame.sup2fredy.com/'], 
